@@ -257,21 +257,27 @@
     padding: .5rem 1rem .5rem 1rem;
     transition: .4s;
 }
+
 .comment-card-footer i {
     margin-right: .3rem;
 }
-.trash-div{
-    transition: .3s;
-}
-.trash-reply{
+
+
+.trash-reply {
     display: inline;
     margin-left: 1rem;
     padding: .2rem;
     font-size: small;
 }
-.trash-div:hover i{
+.trash-div {
+    margin-left: .7rem;
+    transition: .4s;
+}
+
+.trash-div:hover  i{
     color: rgba(122, 2, 2, 0.904);
 }
+
 .comment-textarea {
     border: none;
     outline: none;
@@ -287,6 +293,73 @@
     padding: .5rem 1rem .5rem 1rem;
 }
 
+#modal-delete {
+    z-index: 5;
+    color: white;
+    padding: 2rem;
+    background-color: rgba(20, 20, 20, 0.774);
+    border-radius: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+
+#modal-delete p {
+    margin: 1rem;
+    margin-top: 0;
+    text-align: justify;
+    font-size: large;
+    font-weight: bold;
+}
+.modal-delete-footer{
+    text-align: center;
+}
+
+.yes-btn {
+    margin:.1rem .5rem .1rem 1rem;
+    padding: .3rem .5rem .3rem .5rem;
+    border-radius: .2rem;
+    border: none;
+    outline: none;
+    background-color: var(--border_color);
+    color:white;
+    transition: .2s;
+}
+
+.no-btn {
+    margin:.1rem 1rem .1rem .5rem;
+    padding: .35rem .8rem .35rem .8rem;
+    border-radius: .2rem;
+    border: none;
+    outline: none;
+    background-color: var(--border_color);
+    color:white;
+    transition: .2s;
+}
+
+.yes-btn:hover {
+    background-color: rgb(17, 17, 17);
+}
+
+.no-btn:hover {
+    background-color: rgb(17, 17, 17);
+
+}
+#overlay{
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background-color: rgba(19, 19, 19, 0.466);
+    display: none;
+}
 @media screen and (min-width:1200px) {
     .comment {
         width: 97%;
@@ -298,7 +371,7 @@
         width: 100%;
     }
 
-    
+
 
     #main {
         display: flex;
@@ -311,7 +384,8 @@
     .post {
         margin: 0;
     }
-#middle-forum-section {
+
+    #middle-forum-section {
         width: 100%;
         margin: 0;
         order: 2;

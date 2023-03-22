@@ -332,6 +332,16 @@
         </section>
     </main>
 
+    <div id="modal-delete">
+        <p>Do you confirm this?</p>
+        <div class="modal-delete-footer">
+            <button onclick="ModalDelete('no')" class="no-btn"><i class="fa-solid fa-xmark"></i></button>
+            <button onclick="ModalDelete('yes')" class="yes-btn"><i
+                    class="fa-solid fa-check fa-bounce"></i></button>
+
+        </div>
+    </div>
+    <div onclick="ModalDelete()" id="overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
         integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
@@ -341,15 +351,34 @@
     <script src="assets/js/theme.js"></script>
     <script>
         toastr.options.closeButton = true;
+        const overlay = document.getElementById("overlay")
+        const modalDelete = document.getElementById("modal-delete")
         //modal
-        const modalShow = () =>{
-            
-        }
-        const modalClose = () =>{
-            
+        const ModalDelete = (action, isShow = "false") => {
+            if (isShow == "true") {
+                modalDelete.style.display = "block"
+                overlay.style.display = "block"
+            } else {
+                modalDelete.style.display = "none"
+                overlay.style.display = "none"
+            }
+            if (action == "yes") {
+                return 'yes'
+            } else if (action == "no") {
+                return "no"
+            }
+            return ""
+
         }
         //modal end
-        
+        const deleteComment = (e) => {
+            // var c = confirm("onay")
+            // console.log(c)
+             ModalDelete("","true") == "yes" ?  
+             e.parentElement.parentElement.parentElement.parentElement.parentElement.remove() : "";
+            
+        }
+
         //comment actions
         const userComments = document.querySelector(".comments-area .user-comments")
         const SendComment = (element) => {
@@ -393,11 +422,7 @@
                     </div>`
             }
         }
-        const deleteComment = (e) => {
-            //onay al
-            //ajax remove success döndü =
-            e.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
-        }
+
 
         //reply actions
 
@@ -508,7 +533,6 @@
 
         postLike.addEventListener('click', () => {
             var likeCount = parseInt(postLike.parentElement.lastElementChild.innerHTML)
-            console.log(likeCount)
             if (!postLike.classList.contains("red-color")) {
                 //ajax add
                 postLike.parentElement.lastElementChild.innerHTML = `${++likeCount}`
