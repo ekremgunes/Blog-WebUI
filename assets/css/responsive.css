@@ -1,0 +1,92 @@
+@media screen and (max-width:1200px) {
+    #right-forum-section {
+        width: 92%;
+    }
+    #footer-social-links ul li{
+        text-align: center;
+    }
+
+    #middle-forum-section {
+        width: 74%;
+        margin-left: 1rem;
+    }
+
+    .post {
+        min-width: 20rem;
+    }
+
+    #left-forum-section {
+        max-width: 98%;
+        padding-left: 0;
+        margin-left: .7rem;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    body{
+        overflow-x: hidden !important;
+    }
+    #right-forum-section {
+        width: 100%;
+    }
+    #middle-forum-section {
+        width: 100%;
+        margin-left: .1rem;
+    }
+
+    .post {
+        min-width: 17rem;
+    }
+    .left-div ul li:hover{
+        padding-right: 1rem;
+    }
+    #left-forum-section {
+        width: 100% ;
+        padding-left: 0 ;
+        margin-left: 1rem ;
+    }
+
+    .left-div {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .left-div ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 98%;
+        overflow-x: scroll;
+    }
+     
+}
+
+
+/* medium */
+@media screen and (max-width: 922px) {
+
+    .left-div ul{
+        padding-left: 2rem;
+    } 
+
+}
+
+/* small screen */
+@media screen and (max-width: 540px) {
+    .left-div ul{
+        padding-left: 10.8rem;
+    } 
+
+    .post {
+        min-width: 15rem;
+    }
+
+    .post-img-div {
+        justify-content: start;
+    }
+}
+@media screen and (max-width: 380px) {
+    .left-div ul{
+        padding-left: 13rem;
+    } 
+}

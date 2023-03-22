@@ -1,0 +1,19 @@
+:root {
+
+    --light_secondary: rgb(235, 182, 49);
+    --light_secondary_alfa: rgba(226, 178, 55, 0.719);
+    --dark_primary: rgb(41, 41, 41);
+    --dark_secondary: rgba(129, 131, 132, 0.5);
+    --dark_light: #9a9b9c;
+    --border_color: rgba(128, 128, 128, 0.212);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Dosis', sans-serif;
+    transition: .5s;
+}

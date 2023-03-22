@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic page need -->
+    <title>Single Post</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta tag -->
+    <meta name="description" content="Blog Sinlge">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/leftbar.css">
+    <link rel="stylesheet" href="assets/css/rightbar.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/single.css">
+    <!-- libs -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
+        integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
+
+
+</head>
+
+<body class="light">
+    <header class="mx-lg-4 mx-3">
+        <div class="nav-area container-fluid  px-3 px-lg-5">
+
+            <div id="nav-logo">
+                <a href="/index.html">
+                    <img src="assets/images/ekrem gunes-logos.jpeg" width="45rem" style="border-radius: 50%;"
+                        alt="LOGO">
+                    <!-- <h3>Forum</h3> -->
+                </a>
+            </div>
+
+            <div id="nav-links">
+                <ul>
+                    <a href="/write.html">
+                        <li><i class="fa-sharp fa-solid fa-feather"></i>Write</li>
+                    </a>
+                    <a href="#">
+                        <li><i class="fa-regular fa-bell"></i>Notify</li>
+                    </a>
+                    <a href="#">
+                        <li><i class="fa-regular fa-user"></i>User</li>
+                    </a>
+
+                    <li class="switch-parent">
+                        <label class="switch">
+                            <input id="switch-input" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="row px-2 px-lg-3 mx-1 mx-md-3 mx-lg-4">
+
+
+        <section id="middle-forum-section" class="col-lg-9 col-12 ">
+            <div class="post-area ">
+                <div class="post">
+                    <div>
+                        <div class="post-info">
+                            <a class="userName" href="#userprofile">
+                                <img src="assets/images/user_woman.jpg" class="post-sender-img">
+
+                                Natalia </a><small class="post-date">03/01/2023</small>
+                        </div>
+
+                        <div class="post-content">
+                            <h1 class="post-head">Istanbul is perfect city</h1>
+                            <p class="post-inner">
+                                <i>How mow lorem</i>
+                                Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
+                                aliasssss natus autem dictaalias natus autem dicta
+                                totam illo
+                                totam illo...
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni omnis cum, accusamus
+                                possimus quas suscipit amet nam corporis fugit ducimus aliquid voluptas nesciunt ab
+                                nihil voluptate. Reiciendis animi ab culpa!
+                            <h3>Lorem dolor</h3>
+                            <img src="assets/images/post-ıstanbul.jpg" width="400px" alt="">
+                            <h4>Lorem</h4>
+                            <ul>
+                                <li>1 gs</li>
+                                <li>2 fb</li>
+                                <li>3 bjk</li>
+                            </ul>
+                            <small>thank you for all lorem 😊</small>
+                            </p>
+                            <div class="post-footer">
+                                <div>
+                                    <span class="tag">yaşam</span>
+                                    <span class="tag">kitap</span>
+
+                                    <i class="fa-regular fa-comments icon-comment"> </i><span>5</span>
+                                    <i class="fa-solid fa-heart icon-heart" title="3 kişi bunu beğendi"></i><span>9123
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- add comment -->
+                <div class="comment ">
+                    <textarea placeholder="Your comment ..." class="comment-textarea" name="comment"></textarea>
+                    <div class="comment-card-footer">
+                        <button type="button" onclick="SendComment(this)"><i
+                                class="fa-solid fa-reply icon-reply"></i>Send</button>
+                    </div>
+                </div>
+                <!-- add comment end -->
+
+                <!-- comments -->
+                <div class="toggle-comments">toggle</div>
+                <div class="comments-area">
+                    <div class="user-comments"></div>
+                    <div class="comment">
+                        <div>
+                            <div class="comment-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/ekrem gunes-logos.jpeg" class="comment-sender-img">
+
+                                    Ekrem </a><small class="comment-date">10 min</small>
+                            </div>
+
+                            <div class="comment-content">
+                                <p class="comment-inner">
+
+                                    Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placea😊
+                                </p>
+                                <div class="comment-footer">
+                                    <div>
+                                        <i class="fa-solid fa-heart icon-heart"
+                                            title="3 kişi buna katıldı"></i><span>3</span>
+                                        <div onclick="replyComment(this)" class="reply-div">
+                                            <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- comment replies -->
+                                <div class="replies"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="comment">
+                        <div>
+                            <div class="comment-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_man.jpg" class="comment-sender-img">
+
+                                    Jhon34 </a><small class="comment-date">10 hour</small>
+                            </div>
+
+                            <div class="comment-content">
+                                <p class="comment-inner">
+
+                                    Lorem ipsum dolor Voluptate facere placeat,Volupem ipsum dolor Voluptate facere
+                                    placeat,Voluptate facere placea !!
+                                </p>
+                                <div class="comment-footer">
+                                    <div>
+                                        <i class="fa-solid fa-heart icon-heart"
+                                            title="3 kişi buna katıldı"></i><span>0</span>
+                                        <div onclick="replyComment(this)" class="reply-div">
+                                            <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- comment replies -->
+                                <div class="replies"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- replied comment -->
+                    <div class="comment">
+                        <div>
+                            <div class="comment-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_lego.jpg" class="comment-sender-img">
+
+                                    legoLover333 </a><small class="comment-date">10 hour</small>
+                            </div>
+
+                            <div class="comment-content">
+                                <p class="comment-inner">
+
+                                    Lorem ipsum dolor ?
+                                </p>
+                                <div class="comment-footer">
+                                    <div>
+                                        <i class="fa-solid fa-heart icon-heart"
+                                            title="3 kişi buna katıldı"></i><span>20</span>
+                                        <div onclick="replyComment(this)" class="reply-div">
+                                            <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- comment replies -->
+                                <div class="replies">
+                                    <div class="comment">
+                                        <div>
+                                            <div class="comment-info">
+                                                <a class="userName" href="#userprofile">
+                                                    <img src="assets/images/user_man.jpg" class="comment-sender-img">
+
+                                                    Jhon34 </a><small class="comment-date">1 hour</small>
+                                            </div>
+
+                                            <div class="comment-content">
+                                                <p class="comment-inner">
+                                                    Lorem ipsum dolor Voluptate facere placeat,Volupem ipsum dolor
+                                                    Voluptate facere placeat,Voluptate facere placea !!
+                                                </p>
+                                                <!--<div class="comment-footer">
+                                                    <div>
+                                                         <a href="like">
+                                                            <i class="fa-solid fa-heart icon-heart"
+                                                                title="3 kişi buna katıldı"></i><span>0</span>
+                                                        </a> 
+                                                        <a style="margin-left: 1rem;" href="reply">
+                                                            <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
+                                                        </a>
+                
+                                                    </div>
+                                                </div>-->
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="comment">
+                                        <div>
+                                            <div class="comment-info">
+                                                <a class="userName" href="#userprofile">
+                                                    <img src="assets/images/user_lego.jpg" class="comment-sender-img">
+
+                                                    legoLover333 </a><small class="comment-date">1 hour</small>
+                                            </div>
+
+                                            <div class="comment-content">
+                                                <p class="comment-inner">
+                                                    Lorem ipsum dolor Voluptate facere placeat,Volupem ipsum dolor
+                                                    Voluptate facere placeat,Voluptate facere placea !!
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--  
+                                    <div class="comment reply-active">
+                                        <div>
+                                            <div class="comment-info">
+                                                <a class="userName" href="#userprofile">
+                                                    <img src="assets/images/user_lego.jpg" class="comment-sender-img">
+
+                                                    yourName </a><small class="comment-date">yourSendTime</small>
+                                            </div>
+
+                                            <div class="comment-content reply-content">
+                                                <textarea name="replyInput" class="reply-input" cols="70"
+                                                    rows="2"></textarea>
+                                                <div class="reply-footer">
+                                                    <button onclick="replyCancel(this)" class="reply-cancel-btn">
+                                                        <i class="fa-solid fa-ban"></i>Cancel</button>
+                                                    <button onclick="reply(this)" class="reply-btn"><i
+                                                            class="fa-solid fa-reply icon-reply"></i>Send</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">...</p>
+
+        </section>
+        <section id="right-forum-section" class="col-12 col-lg-3">
+
+            <div class="user-info">
+                <a href="/user.html"><img src="assets/images/user_woman.jpg" alt=""></a>
+                <h4>Natalia</h4>
+                <h6>Yazar / Japonya</h6>
+                <h6>343 Takipçi</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum aliquam quidem facilis odio
+                    illum ratione voluptatum ..</p>
+                <button class="btn-follow" type="button">Follow</button>
+            </div>
+
+            <div id="footer">
+                <div id="footer-social-links">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i>Github</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="text-center">Copyright Forum 2023 &copy;</div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/libs/toastr/toastr.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        toastr.options.closeButton = true;
+        //modal
+        const modalShow = () =>{
+            
+        }
+        const modalClose = () =>{
+            
+        }
+        //modal end
+        
+        //comment actions
+        const userComments = document.querySelector(".comments-area .user-comments")
+        const SendComment = (element) => {
+            var commentText = element.parentElement.parentElement.querySelector("textarea").value
+
+            if (commentText.trim().length < 1) {
+                toastr.warning("Comment area can't be empty")
+            } else {
+                //ajax
+                //success döndü ekle 
+                element.parentElement.parentElement.querySelector("textarea").value = ""
+                userComments.innerHTML += `<div class="comment">
+                        <div>
+                            <div class="comment-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_lego.jpg" class="comment-sender-img">
+
+                                    legoLover333 </a><small class="comment-date">1 second later</small>
+                            </div>
+
+                            <div class="comment-content">
+                                <p class="comment-inner">
+                                    ${commentText}                                    
+                                </p>
+                                <div class="comment-footer">
+                                    <div>
+                                        <i class="fa-solid fa-heart icon-heart"></i><span>0</span>
+                                        <div onclick="replyComment(this)" class="reply-div">
+                                            <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
+                                        </div>
+                                        <div onclick="deleteComment(this)" class="reply-div trash-div">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- comment replies -->
+                                <div class="replies"></div>
+                            </div>
+
+                        </div>
+                    </div>`
+            }
+        }
+        const deleteComment = (e) => {
+            //onay al
+            //ajax remove success döndü =
+            e.parentElement.parentElement.parentElement.parentElement.parentElement.remove()
+        }
+
+        //reply actions
+
+        //active reply html
+        var reply_div = `
+                    <div class="comment reply-active">
+                        <div>
+                            <div class="comment-info">
+                                <a class="userName" href="#userprofile">
+                                        <img src="assets/images/user_lego.jpg" class="comment-sender-img">
+
+                                        legoLover333
+                                </a>
+                                </div>
+                                    <div class="comment-content reply-content">
+                                        <textarea name="replyInput" class="reply-input" cols="70"
+                                            rows="2">
+                                        </textarea>
+                                        <div class="reply-footer">
+                                        <button onclick="replyCancel(this)" class="reply-cancel-btn">
+                                            <i class="fa-solid fa-ban"></i>Cancel</button>
+                                        <button onclick="reply(this)" class="reply-btn"><i
+                                        class="fa-solid fa-reply icon-reply"></i>Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                `;
+
+        const replyComment = (element) => {
+
+            if (document.querySelectorAll(".replies .reply-active").length == 0) {
+                var repliesDiv = element.parentNode.parentNode.parentNode;
+                repliesDiv.childNodes[7].innerHTML += reply_div
+                repliesDiv.querySelector(".reply-input").focus()
+            }
+            else if (document.querySelectorAll(".replies .reply-active").length == 1) {
+                replyCancel()
+                replyComment(element)
+            }
+
+        }
+
+        const replyCancel = () => {
+            document.querySelector(".reply-active").remove()
+        }
+
+        const deleteReply = (e) => {
+            //modal
+            //ajax remove success
+            e.parentElement.parentElement.parentElement.remove()
+        }
+
+        const reply = (element) => {
+            var replyMessage = ""
+            replyMessage = document.querySelector(".replies .reply-active .reply-input").value
+            if (replyMessage.trim().length < 1) {
+                toastr.warning("Reply Message Can't be Empty")
+            } else {
+                //ajax işlemi yapıldı
+                //success döndü
+                var repliesDiv = element.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+                replyCancel()
+
+                var reply_div = `<div class="comment">
+                                <div>
+                                    <div class="comment-info">
+                                        <a class="userName" href="#userprofile">
+                                            <img src="assets/images/user_lego.jpg" class="comment-sender-img">
+                                            legoLover333 
+                                        </a><small class="comment-date">1 second later</small>
+                                        <div onclick="deleteReply(this)" class="reply-div trash-div trash-reply">
+                                        <i class="fa-solid fa-trash"></i>
+                                        </div>    
+                                    </div>
+                                    <div class="comment-content">
+                                        <p class="comment-inner">
+                                            ${replyMessage} 
+                                        <p>
+                                            
+                                    </div>
+                                </div>
+                            </div>`;
+                repliesDiv.childNodes[7].innerHTML += reply_div
+            }
+        }
+
+        //like actions
+        const postLike = document.querySelector(".post-footer .icon-heart")
+        const commentLikes = document.querySelectorAll(".comments-area .icon-heart")
+
+        commentLikes.forEach(e => {
+            e.addEventListener('click', () => {
+                if (e.classList.contains("red-color")) {
+                    //ajax remove
+                    var commentCount = parseInt(e.parentElement.querySelector("span").textContent)
+                    e.parentElement.querySelector("span").textContent = `${--commentCount}`
+                    e.classList.remove("red-color")
+                } else {
+                    //ajax add
+                    var commentCount = parseInt(e.parentElement.querySelector("span").textContent)
+                    e.parentElement.querySelector("span").textContent = `${++commentCount}`
+                    e.classList.add("red-color")
+
+                }
+            })
+        })
+
+        postLike.addEventListener('click', () => {
+            var likeCount = parseInt(postLike.parentElement.lastElementChild.innerHTML)
+            console.log(likeCount)
+            if (!postLike.classList.contains("red-color")) {
+                //ajax add
+                postLike.parentElement.lastElementChild.innerHTML = `${++likeCount}`
+                if (postLike.classList.contains("animate-heart-remove")) {
+                    postLike.classList.remove("animate-heart-remove")
+                }
+                postLike.classList.add("red-color")
+                postLike.classList.add("animate-heart")
+            } else {
+                //ajax remove
+                likeCount--
+                postLike.parentElement.lastElementChild.innerHTML = `${likeCount}`
+
+                postLike.classList.remove("animate-heart")
+                postLike.classList.remove("red-color")
+                postLike.classList.add("animate-heart-remove")
+
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
