@@ -27,13 +27,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/write.css">
     <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
+
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+    <!-- editor 
+    <link rel="stylesheet" href="assets/libs/joditEditor/jodit.es2018.min.css">
+    <script  src="assets/libs/joditEditor/jodit.es2018.min.js"></script>
     
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-
-
-
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jodit/3.24.2/jodit.es2018.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jodit/3.24.2/jodit.es2018.min.js"></script> -->
+    <link rel="stylesheet" href="assets/css/editor.css">
 </head>
+
 
 <body class="light">
     <header class="mx-lg-4 mx-3">
@@ -76,12 +86,18 @@
             <div class="post-area ">
                 <div class="post">
                     <div>
-                        <div id="summernote"></div>
-
+                        <div>
+                            <label class="form-label" for="">Header</label>
+                            <input type="text" class="form-control" name="">
+                            <br>
+                        </div>
+                        <div id="editor"></div>
+                        <button class="write-btn" type="button" onclick="SendContent(this)" id="write-btn">Send</button>
+                        <button class="write-btn" type="button" onclick="ResetEditor()">Reset</button>
                     </div>
                 </div>
 
-               
+
             </div>
 
         </section>
@@ -111,27 +127,59 @@
             </div>
         </section>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-        <script>
-            $('#summernote').summernote({
-              placeholder: 'Send a post',
-              tabsize: 2,
-              height: 150,
-              toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture']]
-              ]
-            });
-          </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/libs/toastr/toastr.min.js"></script>
+
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script>
+
+
+        const { Editor } = toastui;
+        const editor = new Editor({
+            el: document.querySelector('#editor'),
+            previewStyle: 'vertical',
+            height: '400px'
+        });
+        // var md = document.querySelector(".toastui-editor-md-mode")
+        // md.classList.replace("toastui-editor-md-mode","toastui-editor-ww-mode")
+
+        editor.focus()
+        const ResetEditor = () => {
+            editor.reset()
+        }
+
+        const SendContent = (e) => {
+            var content = 0
+            content = editor.getMarkdown()
+            content = editor.getMarkdown().replaceAll("<br>", "").length
+            content = editor.getMarkdown().replaceAll("-", "").length
+            content = editor.getMarkdown().replaceAll("|", "").length
+            content = editor.getMarkdown()
+            .replaceAll('<td><p><br class="ProseMirror-trailingBreak"></p></td>', '').length
+            content = editor.getMarkdown().replaceAll("<td></td>", "").length
+            console.log(content)
+
+            // if (textarea.value.trim().length > 11) {
+            //     if (textarea.value.trim().length > 5000000) {
+            //         // ~ max content 5mb
+            //         toastr.error("Too much content images and texts greater than ~5mb :(")
+            //     } else {
+            //         toastr.info("Post sending")
+            //         //ajax
+            //     }
+
+            // } else {
+            //     toastr.warning("Post can't be empty")
+
+            // }
+        }
+    </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/theme.js"></script>
-    
+
 </body>
 
 </html>

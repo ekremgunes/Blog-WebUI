@@ -1,0 +1,16 @@
+.write-btn{
+    border-radius: .5rem;
+    padding: .5rem 1rem .5rem 1rem;
+    border: none;
+    outline: none;
+    transition: .3s;
+    background-color: rgba(209, 209, 209, 0.596);
+}
+.write-btn:hover{
+    border-radius: 0;
+    background-color: rgba(141, 141, 141, 0.685);
+
+}
+.form-control:focus{
+    box-shadow: none;
+}

@@ -1,0 +1,30 @@
+@media only screen and (max-width: 480px) {
+    .toastui-editor-dropdown-toolbar {
+        max-width: none;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .toastui-editor-popup{
+        margin-left: 2.2rem;
+    }
+}
+#editor{
+    margin-bottom: 1rem;
+}
+.toastui-editor-defaultUI{
+    border-radius: 1rem;
+    border: none;
+}
+.toastui-editor-defaultUI-toolbar{
+    border-radius: 1rem 1rem 0 0;
+}
+.toastui-editor-toolbar-item-wrapper{
+    display: none !important;
+}
+.toastui-editor-contents h1,
+.toastui-editor-contents h2{
+    border-bottom: none;
+}
+.toastui-editor-md-container{
+    background-color: white;
+}
