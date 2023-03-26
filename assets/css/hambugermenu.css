@@ -1,0 +1,136 @@
+/*I get these from https://codepen.io/sergioandrade :)*/
+@import url(cssLayout.css);
+.open {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    width: 45px;
+    height: 49px;
+    display: block;
+    transition: opacity 0.2s linear;
+    display: none;
+    opacity: 0.90;
+
+}
+.open:hover {
+    opacity: 1;
+}
+.open span {
+    display: block;
+    float: left;
+    clear: both;
+    height: 4px;
+    width: 40px;
+    border-radius: 51px;
+    background-color: #000;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.open span:nth-child(1) {
+    margin-top: 10px;
+    z-index: 9;
+}
+.open span:nth-child(2) {
+    margin-top: 25px;
+}
+.open span:nth-child(3) {
+    margin-top: 40px;
+}
+.sub-menu {
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    height: 0;
+    width: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    background-color: var(--light_secondary);
+    border-radius: 50%;
+    z-index: 18;
+    overflow: hidden;
+    margin-top: 1.1rem;
+}
+.sub-menu li {
+    display: block;
+    float: right;
+    clear: both;
+    height: auto;
+    margin-right: -160px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.sub-menu li:first-child {
+    margin-top: 180px;
+}
+.sub-menu li:nth-child(1) {
+    -webkit-transition-delay: 0.05s;
+}
+.sub-menu li:nth-child(2) {
+    -webkit-transition-delay: 0.1s;
+}
+.sub-menu li:nth-child(3) {
+    -webkit-transition-delay: 0.15s;
+}
+.sub-menu li:nth-child(4) {
+    -webkit-transition-delay: 0.2s;
+}
+.sub-menu li:nth-child(5) {
+    -webkit-transition-delay: 0.25s;
+}
+.sub-menu li a {
+    color: #000000;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+    width: 100%;
+    display: block;
+    float: left;
+    line-height: 40px;
+    transition: .5s;
+    border-right: 1px solid var(--light_secondary);
+    padding-right: .5rem;
+}
+.sub-menu li a:hover{
+    border-right: 1px solid black;
+}
+.oppenned .sub-menu {
+    opacity: 1;
+    height: 400px;
+    width: 400px;
+}
+.oppenned span:nth-child(2) {
+    overflow: visible;
+}
+.oppenned span:nth-child(1), .oppenned span:nth-child(3) {
+    z-index: 100;
+    transform: rotate(45deg);
+}
+.oppenned span:nth-child(1) {
+    transform: rotate(45deg) translateY(12px) translateX(12px);
+}
+.oppenned span:nth-child(2) {
+    height: 400px;
+    width: 400px;
+    right: -160px;
+    top: -160px;
+    border-radius: 50%;
+    background-color: var(--light_secondary);
+}
+.oppenned span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px) translateX(10px);
+}
+.oppenned li {
+    margin-right: 168px;
+}
+.cls{
+    cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+
+    .open{
+        display: block;
+
+    }
+    
+}
