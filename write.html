@@ -86,14 +86,32 @@
             <div class="post-area ">
                 <div class="post">
                     <div>
+
+                        <div id="editor"></div>
                         <div>
                             <label class="form-label" for="">Header</label>
                             <input type="text" class="form-control" name="">
                             <br>
                         </div>
-                        <div id="editor"></div>
-                        <button class="write-btn" type="button" onclick="SendContent(this)" id="write-btn">Send</button>
-                        <button class="write-btn" type="button" onclick="ResetEditor()">Reset</button>
+                        <!-- <div>
+                            <label class="form-label" for="">Tags</label>
+                            <input type="text" class="form-control" name="">
+                            <br>
+                        </div> -->
+                        <div class="keyHandler">
+                            <button type="button" id="addKey">+</button>
+                            <input type="text" placeholder="Keyword + Enter" id="keysInput">
+                        </div>
+                        <div class="addedKeysHolder"></div>
+
+
+                        <!-- Just give this input the name="etc" attribute -->
+                        <input type="hidden" id="lkey" name="tags">
+                        <div class="col-12">
+                            <button class="write-btn" type="button" onclick="SendContent(this)"
+                                id="write-btn">Send</button>
+                            <button class="write-btn" type="button" onclick="ResetEditor()">Reset</button>
+                        </div>
                     </div>
                 </div>
 
@@ -135,7 +153,49 @@
 
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <script>
+        //call addKey() by pressing Enter (  This block is optional!  )
+        $(window).keydown(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                addKey();
+                return false;
+            }
+        });
 
+        //call addKey() by pressing button
+        $('#addKey').click(function (e) {
+            addKey();
+        });
+
+
+        //Add key function
+        function addKey() {
+            let key = $('#keysInput').val()
+            if (key != '') {
+                let tag = document.createElement('span')
+                $(tag).append(key)
+                $(tag).attr('onclick', `$(this).remove();removeKey("${key}");`)
+                $('.addedKeysHolder').append(tag)
+                $('#keysInput').val('')
+                resetKey()
+            }
+        }
+
+        function removeKey() {
+            resetKey()
+        }
+
+        //Reset all keys
+        function resetKey() {
+            $('#lkey').val('')
+            for (let i = 1; i <= $('.addedKeysHolder span').length; i++) {
+                let theKey = $(`.addedKeysHolder span:nth-child(${i})`).text()
+                let prevVal = $('#lkey').val() + ','
+                $('#lkey').val(prevVal + theKey)
+            }
+            $('#lkey').val($('#lkey').val());
+            $('#keysInput').focus();
+        }
 
         const { Editor } = toastui;
         const editor = new Editor({
@@ -143,38 +203,36 @@
             previewStyle: 'vertical',
             height: '400px'
         });
-        // var md = document.querySelector(".toastui-editor-md-mode")
-        // md.classList.replace("toastui-editor-md-mode","toastui-editor-ww-mode")
 
         editor.focus()
         const ResetEditor = () => {
             editor.reset()
         }
-
+        
+        
         const SendContent = (e) => {
-            var content = 0
-            content = editor.getMarkdown()
-            content = editor.getMarkdown().replaceAll("<br>", "").length
-            content = editor.getMarkdown().replaceAll("-", "").length
-            content = editor.getMarkdown().replaceAll("|", "").length
-            content = editor.getMarkdown()
-            .replaceAll('<td><p><br class="ProseMirror-trailingBreak"></p></td>', '').length
-            content = editor.getMarkdown().replaceAll("<td></td>", "").length
-            console.log(content)
+            let mdtext = editor.getMarkdown()
+            let cleanedup_mdtext = mdtext
+            cleanedup_mdtext = cleanedup_mdtext.replace(/<[\/]?span[^>]*>/g, "")
+            cleanedup_mdtext = cleanedup_mdtext.replace(/<br[\s\/]*>/g, "")
+            cleanedup_mdtext = cleanedup_mdtext.replace(/<[\/]?u>/g, "")            
+            
+            console.log(cleanedup_mdtext.toString().length)
 
-            // if (textarea.value.trim().length > 11) {
-            //     if (textarea.value.trim().length > 5000000) {
-            //         // ~ max content 5mb
-            //         toastr.error("Too much content images and texts greater than ~5mb :(")
-            //     } else {
-            //         toastr.info("Post sending")
-            //         //ajax
-            //     }
+            if (cleanedup_mdtext.toString().length > 10) {
+                if (cleanedup_mdtext.toString().length > 4000000)// ~ max content 4mb 
+                {
+                    toastr.error("Too much content images and texts greater than ~4mb :(")
+                } else {
+                    toastr.info("Post sending")
+                    //ajax post mdtext
 
-            // } else {
-            //     toastr.warning("Post can't be empty")
+                }
 
-            // }
+            } else {
+                toastr.warning("Post can't be empty")
+
+            }
         }
     </script>
     <script src="assets/js/app.js"></script>
