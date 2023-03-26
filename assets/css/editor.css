@@ -28,3 +28,6 @@
 .toastui-editor-md-container{
     background-color: white;
 }
+.page{
+    z-index: 10 !important;
+  }

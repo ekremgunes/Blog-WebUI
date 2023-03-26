@@ -70,7 +70,13 @@
     } 
 
 }
+@media screen and (max-width: 750px) {
 
+    #nav-links{
+        display: none;
+    } 
+
+}
 /* small screen */
 @media screen and (max-width: 540px) {
     .left-div ul{

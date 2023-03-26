@@ -72,7 +72,7 @@ const changeTheme = (theme) => {
                     e.classList.add("item-dark-text")
                 })
             })
-        if (document.querySelectorAll(".replies .reply-active").length === 1) {
+        if (document.querySelectorAll(".replies .reply-active").length == 1) {
             const reply_active = document.querySelector(".replies .reply-active")
             const reply_input = reply_active.querySelector(".reply-input") 
             reply_active.classList.add("reply-background")
