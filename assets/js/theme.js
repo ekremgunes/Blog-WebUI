@@ -1,4 +1,5 @@
 const ThemeSwitch = document.querySelector('#switch-input')
+const MobileSwitch = document.querySelector("#mobileDarkSwitch")
 const body = document.body;
 const posts = document.querySelectorAll(".post")
 
@@ -21,6 +22,18 @@ localStorage.clear();
 
 //listen the click and call theme changer function
 ThemeSwitch.addEventListener('click', () => {
+
+    if (body.classList.contains('light')) {
+        changeTheme('dark');//light to dark      
+    }
+    else if (body.classList.contains('dark')) {
+
+        changeTheme('light'); //dark to light     
+
+    }
+})
+//listen the click and call theme changer function on mobile
+MobileSwitch.addEventListener('click', () => {
 
     if (body.classList.contains('light')) {
         changeTheme('dark');//light to dark      

@@ -96,3 +96,8 @@
         padding-left: 13rem;
     } 
 }
+@media screen and (max-width: 350px) {
+    .left-div ul{
+        padding-left: 16rem;
+    } 
+}

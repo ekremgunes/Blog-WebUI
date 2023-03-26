@@ -11,8 +11,6 @@
     <meta name="description" content="Blog Sinlge">
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/leftbar.css">
-    <link rel="stylesheet" href="assets/css/rightbar.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/single.css">
@@ -29,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
 
+    <link rel="stylesheet" href="assets/css/hambugermenu.css">
 
 </head>
 
@@ -63,6 +62,23 @@
                         </label>
                     </li>
                 </ul>
+            </div>
+            <div id="hamburgerDiv" class="open">
+                <span class="cls"></span>
+                <span>
+                    <ul class="sub-menu ">
+                        <li>
+                            <a href="write.html" title="about">Write</a>
+                        </li>
+                        <li>
+                            <a href="user.html" title="skills">User</a>
+                        </li>
+                        <li>
+                            <a href="login.html" title="jobs">Login</a>
+                        </li>
+                    </ul>
+                </span>
+                <span class="cls"></span>
             </div>
         </div>
     </header>
@@ -269,32 +285,6 @@
 
                                         </div>
                                     </div>
-
-                                    <!--  
-                                    <div class="comment reply-active">
-                                        <div>
-                                            <div class="comment-info">
-                                                <a class="userName" href="#userprofile">
-                                                    <img src="assets/images/user_lego.jpg" class="comment-sender-img">
-
-                                                    yourName </a><small class="comment-date">yourSendTime</small>
-                                            </div>
-
-                                            <div class="comment-content reply-content">
-                                                <textarea name="replyInput" class="reply-input" cols="70"
-                                                    rows="2"></textarea>
-                                                <div class="reply-footer">
-                                                    <button onclick="replyCancel(this)" class="reply-cancel-btn">
-                                                        <i class="fa-solid fa-ban"></i>Cancel</button>
-                                                    <button onclick="reply(this)" class="reply-btn"><i
-                                                            class="fa-solid fa-reply icon-reply"></i>Send</button>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     -->
                                 </div>
                             </div>
 
@@ -348,6 +338,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/libs/toastr/toastr.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/hamburgermenu.js"></script>
     <script src="assets/js/theme.js"></script>
     <script>
         toastr.options.closeButton = true

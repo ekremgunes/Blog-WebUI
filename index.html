@@ -10,11 +10,9 @@
 
     <!-- meta tags -->
     <meta name="description" content="Blog Web Site from Ekrem Gunes">
-    <!-- custom css -->    
+    <!-- custom css -->
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/leftbar.css">
-    <link rel="stylesheet" href="assets/css/rightbar.css">  
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
@@ -29,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
+    <link rel="stylesheet" href="assets/css/hambugermenu.css">
 
 </head>
 
@@ -63,6 +62,23 @@
                         </label>
                     </li>
                 </ul>
+            </div>
+            <div id="hamburgerDiv" class="open">
+                <span class="cls"></span>
+                <span>
+                    <ul class="sub-menu ">
+                        <li>
+                            <a href="write.html" title="about">Write</a>
+                        </li>
+                        <li>
+                            <a href="user.html" title="skills">User</a>
+                        </li>
+                        <li>
+                            <a href="login.html" title="jobs">Login</a>
+                        </li>
+                    </ul>
+                </span>
+                <span class="cls"></span>
             </div>
         </div>
     </header>
@@ -99,6 +115,22 @@
         </section>
 
         <section id="middle-forum-section" class="col-lg-7 col-md-12 ">
+            <div class="filters col-lg-12 row">
+                <div class="col-6 col-lg-8">
+                    <button>top</button>
+                    <button>newest</button>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <select id="CountrySelector">
+                        <option value="1" selected>World</option>
+                        <option value="2" >Turkiye</option>
+                        <option value="3" >France</option>
+                        <option value="4" >England</option>
+                        <option value="5" >USA</option>
+                        <option value="6" >Egypt</option>
+                    </select>
+                </div>
+            </div>
             <div id="nav-search">
                 <input id="search-input" type="text" placeholder="search">
                 <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -315,9 +347,12 @@
         </section>
 
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js" integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/libs/toastr/toastr.min.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/hamburgermenu.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 

@@ -1,5 +1,9 @@
 @import url(cssLayout.css);
 
+html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+}
 
 .nav-area {
     font-family: 'Dosis', sans-serif;
@@ -221,3 +225,165 @@ a {
 .icon-comment {
     margin-left: 1.1rem;
 }
+
+/* ***** 
+         LEFT  BAR CSS  START
+****** */
+#left-forum-section {
+    max-width: 15rem;
+    margin-top: 1.6rem;
+    margin-left: 2rem;
+}
+
+.left-div {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: sticky;
+    top: 2rem;
+
+}
+
+.left-div h5 {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.left-div ul {
+    padding-left: .7rem;
+    margin-left: .2rem;
+}
+
+.left-div ul li {
+    font-weight: 500;
+    transition: .25s;
+    margin-right: 1rem;
+    font-size: large;
+    margin-top: .7rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.836);
+    border-radius: 1rem;
+    padding: 0.1rem 0rem 0.1rem .9rem;
+}
+
+.left-div ul li:hover {
+    background-color: rgba(196, 196, 196, 0.507);
+
+}
+/* ***** 
+         LEFT  BAR CSS END 
+****** */
+
+
+/* ***** 
+         RİGHT  BAR CSS  START
+****** */
+
+#right-forum-section {
+    margin-top: 1.6rem;
+}
+
+#footer {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+
+}
+
+#footer-social-links {
+    margin-bottom: 1rem;
+    padding: .3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+
+}
+
+#footer-social-links ul {
+    margin: 0;
+    padding: 0;
+    padding-bottom: .8rem;
+
+}
+
+#footer-social-links ul li {
+    padding-top: .3rem;
+    list-style: none;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+#footer ul li a {
+    color: gray;
+    transition: 1s;
+}
+
+#footer ul li a i {
+    font-size: x-large;
+    margin-right: .5rem;
+
+}
+
+#footer ul li a:hover {
+    color: black;
+}
+
+#footer ul li a:active {
+    color: black;
+}
+
+.user-info {
+    margin: 1rem 0rem 1rem 0rem;
+    border-bottom: 1px solid var(--border_color);
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 1.5rem;
+
+}
+
+.user-info img {
+    border-radius: 50%;
+    width: 5rem;
+    margin-bottom: .5rem;
+}
+
+.user-info h4 {
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+
+.user-info h6 {
+    color: var(--dark_light);
+
+}
+
+.user-info p {
+    text-align: justify;
+}
+
+.btn-follow{    
+    border-radius: .5rem;
+    padding: .4rem 1.5rem .4rem 1.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--dark_light);
+    transition: .33s;
+    font-weight: bold;
+    text-decoration: wavy;
+    color: var(--dark_primary);
+}
+.btn-follow:hover{
+    border-radius: 0;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+
+} 
+
+/* ***** 
+         RİGHT  BAR CSS  END
+****** */
