@@ -76,6 +76,10 @@
                         <li>
                             <a href="login.html" title="jobs">Login</a>
                         </li>
+                        <li class="switch-parent">
+                            <a href="javascript:void(0)" id="mobileDarkSwitch">Dark Mode</a>
+
+                        </li>
                     </ul>
                 </span>
                 <span class="cls"></span>
@@ -115,27 +119,39 @@
         </section>
 
         <section id="middle-forum-section" class="col-lg-7 col-md-12 ">
-            <div class="filters col-lg-12 row">
-                <div class="col-6 col-lg-8">
-                    <button>top</button>
-                    <button>newest</button>
-                </div>
-                <div class="col-6 col-lg-4">
-                    <select id="CountrySelector">
-                        <option value="1" selected>World</option>
-                        <option value="2" >Turkiye</option>
-                        <option value="3" >France</option>
-                        <option value="4" >England</option>
-                        <option value="5" >USA</option>
-                        <option value="6" >Egypt</option>
-                    </select>
-                </div>
-            </div>
             <div id="nav-search">
                 <input id="search-input" type="text" placeholder="search">
                 <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>
-            <div class="post-area px-1 ">
+            <div class="filters">
+                <div class="row">
+                    <div class="col-7 ">
+                        <button onclick="filterHot(this)">
+                            <i class="fa-solid fa-fire"></i> hot
+                        </button>
+                        <button onclick="filterTop(this)">
+                            <i class="fa-solid fa-signal"></i> top
+                        </button>
+                    </div>
+                    <div class="col-5">
+                        <div class="countryFilterDiv">
+                            <i id="worldIcon" class="fa-solid fa-globe"></i>
+                            <select onchange="filterCountry(this.value)" id="CountrySelector">
+                                <option value="1" selected>World</option>
+                                <option value="2">Turkiye</option>
+                                <option value="3">France</option>
+                                <option value="4">England</option>
+                                <option value="5">USA</option>
+                                <option value="6">Egypt</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="post-area">
                 <div class="post row">
                     <div class="col-12 col-md-8 col-lg-8">
                         <div class="post-info">
@@ -155,7 +171,7 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">yaşam</span>
+                                    <span class="tag">life</span>
                                     <span class="tag">travel</span>
                                     <span class="tag">Istanbul</span>
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>30</span>
@@ -193,8 +209,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">yaşam</span>
-                                    <span class="tag">kitap</span>
+                                    <span class="tag">life</span>
+                                    <span class="tag">tag</span>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -228,8 +244,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">yaşam</span>
-                                    <span class="tag">kitap</span>
+                                    <span class="tag">life</span>
+                                    <span class="tag">tag</span>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -263,8 +279,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">yaşam</span>
-                                    <span class="tag">kitap</span>
+                                    <span class="tag">life</span>
+                                    <span class="tag">tag</span>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -298,8 +314,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">yaşam</span>
-                                    <span class="tag">kitap</span>
+                                    <span class="tag">life</span>
+                                    <span class="tag">tag</span>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -325,8 +341,8 @@
 
             <div class="user-info">
                 <a href="/user.html"><img src="assets/images/user_lego.jpg" alt=""></a>
-                <h4>Kullanıcı adı</h4>
-                <h6>Kullanıcı alt</h6>
+                <h4>Username</h4>
+                <h6>UserInfo</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum aliquam quidem facilis odio
                     illum ratione voluptatum ..</p>
                 <button class="btn-follow" type="button">Follow</button>
@@ -341,7 +357,7 @@
                         <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     </ul>
                 </div>
-                <div class="text-center">Copyright Forum 2023 &copy;</div>
+                <div class="text-center">Copyright <a style="color: goldenrod;margin: 0 .4rem;" href="http://gunesekrem.com">gunesekremcom</a>  <script>var date = new Date();document.write(date.getFullYear()); </script> &copy;</div>
 
             </div>
         </section>

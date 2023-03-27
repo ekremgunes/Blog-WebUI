@@ -1,8 +1,9 @@
 @import url(cssLayout.css);
 
-html, body {
+html,
+body {
     width: 100%;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 
 .nav-area {
@@ -20,13 +21,19 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: .5rem;
+    width: 99%;
+    margin-bottom: .75rem;
+    margin-top: .8rem;
     margin-left: 1.4rem;
-
+}
+@media screen and (max-width:1024px){
+    #nav-search {
+        margin-top: .7rem;
+    }
 }
 
 #search-input {
-    border-radius: 1.3rem;
+    border-radius: 1rem;
     outline: none;
     padding: 1rem;
     padding-left: 1.3rem;
@@ -36,7 +43,7 @@ html, body {
     border: none;
     background-color: rgba(204, 204, 204, 0.39);
     outline: none;
-    width: 44rem;
+    min-width: 99%;
     font-weight: bold;
     text-indent: .1rem;
     transition: .4s;
@@ -102,6 +109,91 @@ a {
 
 #nav-logo a h3 {
     color: black;
+}
+
+/* filters */
+.filters {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin: 0 .3rem 0 .3rem;
+}
+
+.filters div:nth-child(1) button {
+    padding: .35rem .75rem;
+    margin-left: .5rem;
+    border-radius: .35rem;
+    background-color: var(--border_color);
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+}
+.filters div:nth-child(1) button:first-child i{
+    color: rgba(172, 49, 27, 0.788);
+    transition: ease-out .5s;
+    margin-right: .15rem;
+}
+.filters div:nth-child(1) button:last-child i{
+    color: rgba(35, 102, 122, 0.753);
+    transition: ease-out .5s;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-right: .2rem;
+    
+}
+.filters div:nth-child(1) button:first-child:hover i{
+    color: rgb(226, 54, 24);
+    transform:scale(1.2);
+}
+.filters div:nth-child(1) button:last-child:hover i{
+    color: rgba(16, 126, 230, 0.938);
+    transform:scale(1.2);
+}
+
+.filters div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+.countryFilterDiv select{
+    padding: 0.4rem 2rem;
+    border: none;
+    border-radius: .6rem;
+    font-weight: 600;
+    
+}
+.countryFilterDiv select option{
+    color: rgba(0, 0, 0, 0.616);
+    font-size: 1rem;
+}
+#worldIcon{
+    transition: ease-in .5s;
+}
+@media screen and (max-width:480px) {
+    .countryFilterDiv select{
+        padding: 0.3rem .5rem;
+    }
+    .filters div:nth-child(1) button{
+        padding: 0.3rem;
+        margin: 0;
+        margin-right: .2rem;
+    }
+}
+@media screen and (max-width:531px) {
+    .filters div:nth-child(2) i{
+        display: none;
+    }
+}
+.countryFilterDiv select option{
+
+    background-color: var(--dark-primary);
+}
+.countryFilterDiv i{
+    margin-right: .5rem;
+    font-size: larger;
 }
 
 /* post */
@@ -239,7 +331,7 @@ a {
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
-    position: sticky;
+    position: sticky !important;
     top: 2rem;
 
 }
@@ -273,6 +365,7 @@ a {
     background-color: rgba(196, 196, 196, 0.507);
 
 }
+
 /* ***** 
          LEFT  BAR CSS END 
 ****** */
@@ -366,7 +459,7 @@ a {
     text-align: justify;
 }
 
-.btn-follow{    
+.btn-follow {
     border-radius: .5rem;
     padding: .4rem 1.5rem .4rem 1.5rem;
     outline: none;
@@ -377,12 +470,13 @@ a {
     text-decoration: wavy;
     color: var(--dark_primary);
 }
-.btn-follow:hover{
+
+.btn-follow:hover {
     border-radius: 0;
     color: white;
     box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
 
-} 
+}
 
 /* ***** 
          RİGHT  BAR CSS  END

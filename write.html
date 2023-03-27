@@ -3,7 +3,7 @@
 
 <head>
     <!-- basic page need -->
-    <title>Single Post</title>
+    <title>Create Content</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -108,9 +108,9 @@
                             <select class="form-select" id="form-category">
                                 <option value="Select Category" disabled selected>Select Category</option>
                                 <!-- other options -->
-                                <option value="">Tech</option>
-                                <option value="">Sport</option>
-                                <option value="">Art</option>
+                                <option value="1">Tech</option>
+                                <option value="2">Sport</option>
+                                <option value="3">Art</option>
 
                             </select>
                             <br>
@@ -222,6 +222,7 @@
         const editor = new Editor({
             el: document.querySelector('#editor'),
             previewStyle: 'vertical',
+            initialEditType: 'wysiwyg',
             height: '400px'
         });
 
@@ -265,27 +266,28 @@
         }
 
         const SendContent = (e) => {
-            var html = editor.getHTML()
-            var editorController = checkEditor(html)
             var tags = [];
             $("#form-tags span").each(function () {
                 tags.push($(this).text());
             });
             var category = $("#form-category").val()
             var title = $("#form-title").val()
+            
+            if (title.length < 10) {
+                toastr.warning("Title is too short")
+                $("#form-title").focus()
+                return
+            }
+            if (category == "") {
+                toastr.warning("Category is empty")
+                $("#form-category").focus()
+                return
+            }
+            var html = editor.getHTML()
+            var editorController = checkEditor(html)
             if (editorController) {
                 if (html.toString().length > 4000000) {
                     toastr.error("Too much content images and texts greater than ~4mb :(")
-                    return
-                }
-                if (title == "" ) {
-                    toastr.warning("Title is empty")
-                    $("#form-title").focus()
-                    return
-                }
-                if (category == "") {
-                    toastr.warning("Category is empty")
-                    $("#form-category").focus()                    
                     return
                 }
                 toastr.info("Post sending")
@@ -295,18 +297,19 @@
                     category: category,
                     tags: tags
                 }
-                $.ajax({
-                    url: "YOUR URL",
-                    method: "POST",
-                    data: JSON.stringify(data),
-                    contentType: "application/json"
-                })
-                    .done(function (response) {
-                        console.log(response);
-                    })
-                    .fail(function (response) {
-                        console.log(response);
-                    })
+                console.log(JSON.stringify(data))
+                // $.ajax({
+                //     url: "YOUR URL",
+                //     method: "POST",
+                //     data: JSON.stringify(data),
+                //     contentType: "application/json"
+                // })
+                //     .done(function (response) {
+                //         console.log(response);
+                //     })
+                //     .fail(function (response) {
+                //         console.log(response);
+                //     })
 
             } else {
                 toastr.warning("Post can't be empty")

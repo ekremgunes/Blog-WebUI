@@ -76,6 +76,10 @@
                         <li>
                             <a href="login.html" title="jobs">Login</a>
                         </li>
+                        <li class="switch-parent">
+                            <a href="javascript:void(0)" id="mobileDarkSwitch">Dark Mode</a>
+
+                        </li>
                     </ul>
                 </span>
                 <span class="cls"></span>
@@ -322,7 +326,7 @@
         </section>
     </main>
 
-    <div id="modal-delete">
+     <div id="modal-delete">
         <p>Do you confirm this?</p>
         <div class="modal-delete-footer">
             <button onclick="ModalDelete('no')" class="no-btn"><i class="fa-solid fa-xmark"></i></button>
@@ -330,7 +334,7 @@
                     class="fa-solid fa-check fa-bounce"></i></button>
 
         </div>
-    </div>
+    </div> 
     <div onclick="ModalDelete()" id="overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
@@ -362,12 +366,13 @@
 
         }
         //modal end
+        //                             YES NO DAN- PARENT PARENT DİYEREK İÇERİĞE ULAŞ VE SİL İÇERİĞİ THİS İLE GÖNDERSİN YANINDA TRUE GELİRSE SİL GELMEZSE DEFAULT FALSE SİLME AYNISI OVERLAY İÇİNDE DEFAULT FALSE SİLME
         const deleteComment = (e) => {
             // var c = confirm("onay")
             // console.log(c)
-             ModalDelete("","true") == "yes" ?  
-             e.parentElement.parentElement.parentElement.parentElement.parentElement.remove() : "";
-            
+            // ModalDelete("", "true") == "yes" ?
+            //     e.parentElement.parentElement.parentElement.parentElement.parentElement.remove() : "";
+
         }
 
         //comment actions
