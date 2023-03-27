@@ -23,8 +23,9 @@
 }
 
 @media screen and (max-width:1024px) {
-    body{
+    html,body{
         overflow-x: hidden !important;
+
     }
     #right-forum-section {
         width: 100%;

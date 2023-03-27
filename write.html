@@ -157,7 +157,7 @@
                         <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     </ul>
                 </div>
-                <div class="text-center">Copyright Forum 2023 &copy;</div>
+                <div class="text-center">Copyright Forum <script>var date = new Date();document.write(date.getFullYear()); </script> &copy;</div>
 
             </div>
         </section>
@@ -278,11 +278,12 @@
                 $("#form-title").focus()
                 return
             }
-            if (category == "") {
+            if (category == null) {
                 toastr.warning("Category is empty")
                 $("#form-category").focus()
                 return
             }
+            
             var html = editor.getHTML()
             var editorController = checkEditor(html)
             if (editorController) {

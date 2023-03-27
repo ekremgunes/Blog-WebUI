@@ -110,4 +110,18 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
+/* for theme changing on localStorage */
+.slider-old-style{
+  transition: .3s;
+  background-color: #edce36b7 !important;
+  -webkit-transform: translateX(0px) !important;
+  -ms-transform: translateX(0px) !important;
+  transform: translateX(0px) !important;
+}
+.slider-old-style::before{
+  -webkit-transform: translateX(0px) !important;
+  -ms-transform: translateX(0px) !important;
+  transform: translateX(0px) !important;
+}
+
 /* switch finished */

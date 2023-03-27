@@ -15,10 +15,11 @@ const comments = document.querySelectorAll(".comment")
 
 
 
-//                  REPLY ACTİVE İNDEXTE NULL GELDĞİ İÇİN UYGULAMA ÇÖKÜYOR ÇALIŞMIYOR
+//                     REPLY ACTİVE İNDEXTE NULL GELDĞİ İÇİN UYGULAMA ÇÖKÜYOR ÇALIŞMIYOR
 
 
-localStorage.clear();
+//localStorage.clear();
+
 
 //listen the click and call theme changer function
 ThemeSwitch.addEventListener('click', () => {
@@ -77,17 +78,20 @@ const changeTheme = (theme) => {
             })
             left_sidebar.classList.add('item-dark')
 
-        }            
+        }
         comments.forEach(element => {
-                element.classList.add("item-dark")
-                element.querySelector("a").classList.add("item-dark-text")
-                element.querySelectorAll("span").forEach(e => {
-                    e.classList.add("item-dark-text")
-                })
+            element.classList.add("item-dark")
+            element.querySelectorAll("span").forEach(e => {
+                e.classList.add("item-dark-text")
             })
+            element.querySelectorAll("a.userName").forEach(e => {
+                e.classList.add("item-dark-text")
+            })
+
+        })
         if (document.querySelectorAll(".replies .reply-active").length == 1) {
             const reply_active = document.querySelector(".replies .reply-active")
-            const reply_input = reply_active.querySelector(".reply-input") 
+            const reply_input = reply_active.querySelector(".reply-input")
             reply_active.classList.add("reply-background")
             reply_active.querySelectorAll("button").forEach(element => {
                 element.classList.add("item-dark-text")
@@ -103,11 +107,10 @@ const changeTheme = (theme) => {
         //local storage
         if (localStorage.getItem('selectedTheme') != 'dark') {
             localStorage.setItem('selectedTheme', 'dark')
+            document.querySelector(".slider").classList.remove("slider-old-style")
 
         }
-        else {
-            ThemeSwitch.toggleAttribute('checked')
-        }
+
     }
     else if (theme == 'light') {
         //swicht color of all area
@@ -132,23 +135,23 @@ const changeTheme = (theme) => {
                 span.classList.remove("item-dark-text")
             })
         })
-        
+
         if (left_sidebar != null) {
             left_sidebar.classList.remove('item-dark')
             left_sidebar_links.forEach(element => {
                 element.classList.remove("item-dark-text")
             })
-        }            
+        }
         comments.forEach(element => {
-                element.classList.remove("item-dark")
-                element.querySelector("a").classList.remove("item-dark-text")
-                element.querySelectorAll("span").forEach(e => {
-                    e.classList.remove("item-dark-text")
-                })
+            element.classList.remove("item-dark")
+            element.querySelector("a").classList.remove("item-dark-text")
+            element.querySelectorAll("span").forEach(e => {
+                e.classList.remove("item-dark-text")
             })
+        })
         if (document.querySelectorAll(".replies .reply-active").length == 1) {
             const reply_active = document.querySelector(".replies .reply-active")
-            const reply_input = reply_active.querySelector(".reply-input") 
+            const reply_input = reply_active.querySelector(".reply-input")
             reply_active.classList.remove("reply-background")
             reply_active.querySelectorAll("button").forEach(element => {
                 element.classList.remove("item-dark-text")
@@ -157,14 +160,21 @@ const changeTheme = (theme) => {
             reply_input.classList.remove("item-dark")
         }
 
-
         //local storage
         if (localStorage.getItem('selectedTheme') == 'dark') {
             localStorage.removeItem('selectedTheme')
+            document.querySelector(".slider").classList.add("slider-old-style")
         }
+
     }
 }
-
-if (localStorage.getItem('selectedTheme') == 'dark') {
-    changeTheme('dark');
+function localDarkCheck() {
+    if (localStorage.getItem('selectedTheme') == 'dark') {
+        ThemeSwitch.setAttribute('checked', true)
+        changeTheme('dark')
+    } else {
+        ThemeSwitch.removeAttribute('checked')
+        changeTheme('light')
+    }
 }
+localDarkCheck()
