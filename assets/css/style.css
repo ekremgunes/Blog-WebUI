@@ -3,6 +3,7 @@
 html,
 body {
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 .nav-area {
@@ -455,7 +456,7 @@ a {
 }
 
 .user-info p {
-    text-align: justify;
+    text-align: center;
 }
 
 .btn-follow {

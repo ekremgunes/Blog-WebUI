@@ -121,7 +121,7 @@
         <section id="middle-forum-section" class="col-lg-7 col-md-12 ">
             <div id="nav-search">
                 <input id="search-input" type="text" placeholder="search">
-                <a href="#" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a onclick="searchPost(this)" href="javascript:void(0)" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>
             <div class="filters">
                 <div class="row">
@@ -171,9 +171,9 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">travel</span>
-                                    <span class="tag">Istanbul</span>
+                                    <a href="" class="tag">life</a>
+                                    <a href="" class="tag">travel</a>
+                                    <a href="" class="tag">Istanbul</a>
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>30</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>9123</span>
                                 </div>
@@ -209,8 +209,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
+                                    <a href="" class="tag">life</a>
+                                    <a href="" class="tag">tag</a>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -244,8 +244,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
+                                    <a href="" class="tag">life</a>
+                                    <a href="" class="tag">tag</a>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -279,8 +279,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
+                                    <a href="" class="tag">life</a>
+                                    <a href="" class="tag">tag</a>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -314,8 +314,8 @@
                             </a>
                             <div class="post-footer">
                                 <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
+                                    <a href="" class="tag">life</a>
+                                    <a href="" class="tag">tag</a>
 
                                     <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
                                     <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
@@ -345,7 +345,8 @@
                 <h6>UserInfo</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum aliquam quidem facilis odio
                     illum ratione voluptatum ..</p>
-                <button class="btn-follow" type="button">Follow</button>
+                <!-- if user is in role make comment line-->
+                <button onclick="follow('?')" class="btn-follow" type="button">Follow</button>
             </div>
 
             <div id="footer">

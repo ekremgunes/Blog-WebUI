@@ -53,8 +53,8 @@
     text-shadow: 1px 1px 15px gray;
 }
 
-.comment-area {
-    margin: 1rem;
+.comments-area {
+    /* display: none;                                       */    
 }
 
 .comment-inner {
@@ -269,12 +269,13 @@
     padding: .2rem;
     font-size: small;
 }
+
 .trash-div {
     margin-left: .7rem;
     transition: .4s;
 }
 
-.trash-div:hover  i{
+.trash-div:hover i {
     color: rgba(122, 2, 2, 0.904);
 }
 
@@ -307,7 +308,6 @@
 }
 
 
-
 #modal-delete p {
     margin: 1rem;
     margin-top: 0;
@@ -315,29 +315,30 @@
     font-size: large;
     font-weight: bold;
 }
-.modal-delete-footer{
+
+.modal-delete-footer {
     text-align: center;
 }
 
 .yes-btn {
-    margin:.1rem .5rem .1rem 1rem;
+    margin: .1rem .5rem .1rem 1rem;
     padding: .3rem .5rem .3rem .5rem;
     border-radius: .2rem;
     border: none;
     outline: none;
     background-color: var(--border_color);
-    color:white;
+    color: white;
     transition: .2s;
 }
 
 .no-btn {
-    margin:.1rem 1rem .1rem .5rem;
+    margin: .1rem 1rem .1rem .5rem;
     padding: .35rem .8rem .35rem .8rem;
     border-radius: .2rem;
     border: none;
     outline: none;
     background-color: var(--border_color);
-    color:white;
+    color: white;
     transition: .2s;
 }
 
@@ -349,7 +350,8 @@
     background-color: rgb(17, 17, 17);
 
 }
-#overlay{
+
+#overlay {
     z-index: 4;
     position: fixed;
     top: 0;
@@ -360,6 +362,31 @@
     background-color: rgba(19, 19, 19, 0.466);
     display: none;
 }
+
+.toggle-comments {
+    width: 97.5%;
+    padding: .6rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-left: .3rem;
+}
+
+.toggle-comments button {
+    margin-left: 1rem;
+    border: none;
+    border-radius: .6rem;
+    padding: .3rem .6rem;
+}
+
+.toggle-comments button i {
+    margin-right: .1rem;
+}
+
+.comments-open {
+    display: block ;
+}
+
 @media screen and (min-width:1200px) {
     .comment {
         width: 97%;

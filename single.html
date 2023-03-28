@@ -132,23 +132,24 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" value="1" name="postId" id="postId"> <!-- your post id-->
 
                     </div>
                 </div>
 
                 <!-- add comment -->
-                 <div class="comment ">
+                <div class="comment ">
                     <textarea placeholder="Your comment ..." class="comment-textarea" name="comment"></textarea>
                     <div class="comment-card-footer">
                         <button type="button" onclick="SendComment(this)"><i
                                 class="fa-solid fa-reply icon-reply"></i>Send</button>
                     </div>
-                    
-                </div> 
+
+                </div>
                 <!-- add comment end -->
 
                 <!-- comments -->
-                <div class="toggle-comments">toggle</div>
+                <div class="toggle-comments"><button onclick="toggleComments()"><i class="fa-solid fa-ellipsis"></i> Comments</button></div>
                 <div class="comments-area">
                     <div class="user-comments"></div>
                     <div class="comment">
@@ -157,7 +158,7 @@
                                 <a class="userName" href="#userprofile">
                                     <img src="assets/images/ekrem gunes-logos.jpeg" class="comment-sender-img">
 
-                                    Ekrem </a><small class="comment-date">10 min</small>
+                                    EkremGunes </a><small class="comment-date">10 min</small>
                             </div>
 
                             <div class="comment-content">
@@ -169,7 +170,7 @@
                                     <div>
                                         <i class="fa-solid fa-heart icon-heart"
                                             title="3 kişi buna katıldı"></i><span>3</span>
-                                        <div onclick="replyComment(this)" class="reply-div">
+                                        <div onclick="createreplyDiv(this)" class="reply-div">
                                             <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
 
                                         </div>
@@ -179,7 +180,7 @@
                                 <!-- comment replies -->
                                 <div class="replies"></div>
                             </div>
-
+                            <input type="hidden" value="1" id="commentId"> <!-- your comment id-->
                         </div>
                     </div>
                     <!--  -->
@@ -200,10 +201,10 @@
                                 </p>
                                 <div class="comment-footer">
                                     <div>
-                                        <i class="fa-solid fa-heart icon-heart"
-                                            title="3 kişi buna katıldı"></i><span>0</span>
-                                        <div onclick="replyComment(this)" class="reply-div">
-                                            <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
+                                        <i class="fa-solid fa-heart icon-heart red-color"
+                                            title="1 kişi buna katıldı"></i><span>1</span>
+                                        <div onclick="createreplyDiv(this)" class="reply-div">
+                                            <i class="fa-solid fa-reply icon-reply "></i> <span>reply</span>
 
                                         </div>
                                     </div>
@@ -211,7 +212,7 @@
                                 <!-- comment replies -->
                                 <div class="replies"></div>
                             </div>
-
+                            <input type="hidden" value="2" id="commentId"> <!-- your comment id-->
                         </div>
                     </div>
                     <!-- replied comment -->
@@ -233,7 +234,7 @@
                                     <div>
                                         <i class="fa-solid fa-heart icon-heart"
                                             title="3 kişi buna katıldı"></i><span>20</span>
-                                        <div onclick="replyComment(this)" class="reply-div">
+                                        <div onclick="createreplyDiv(this)" class="reply-div">
                                             <i class="fa-solid fa-reply icon-reply"></i> <span>reply</span>
 
                                         </div>
@@ -292,7 +293,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <input type="hidden" value="3" id="commentId"> <!-- your comment id-->
                         </div>
                     </div>
                 </div>
@@ -309,7 +310,7 @@
                 <h6>343 Takipçi</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum aliquam quidem facilis odio
                     illum ratione voluptatum ..</p>
-                <button class="btn-follow" type="button">Follow</button>
+                <button onclick="follow(1)" class="btn-follow" type="button">Follow</button>
             </div>
 
             <div id="footer">
@@ -321,13 +322,15 @@
                         <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     </ul>
                 </div>
-                <div class="text-center">Copyright Forum <script>var date = new Date();document.write(date.getFullYear()); </script> &copy;</div>
+                <div class="text-center">Copyright Forum
+                    <script>var date = new Date(); document.write(date.getFullYear()); </script> &copy;
+                </div>
 
             </div>
         </section>
     </main>
-    
-    
+
+
     <div onclick="ModalDelete('no')" id="overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
