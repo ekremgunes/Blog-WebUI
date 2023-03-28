@@ -9,7 +9,7 @@
 
 .light {
   background-color: #ebeaea;
-  transition: .8s;
+  transition: .3s;
 
 }
 
@@ -17,19 +17,19 @@
   /* background-color: rgba(0, 0, 0, 0.705);*/
   background-color: var(--dark_primary) !important;
   color: whitesmoke !important;
-  transition: .8s;
+  transition: .3s;
 
 }
 
 .item-dark {
   background-color: var(--dark_theme) !important;
   color: whitesmoke !important;
-  transition: .8s;
+  transition: .3s;
 }
 
 .item-dark-text {
   color: whitesmoke !important;
-  transition: .7s;
+  transition: .3s;
 }
 .hover-dark:hover{
   color: white !important;

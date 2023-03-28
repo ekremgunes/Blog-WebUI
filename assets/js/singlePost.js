@@ -1,30 +1,36 @@
 toastr.options.closeButton = true
 const overlay = document.getElementById("overlay")
-const modalDelete = document.getElementById("modal-delete")
-//modal
-const ModalDelete = (action, isShow = "false") => {
-    if (isShow == "true") {
-        modalDelete.style.display = "block"
-        overlay.style.display = "block"
-    } else {
-        modalDelete.style.display = "none"
-        overlay.style.display = "none"
-    }
-    if (action == "yes") {
-        return 'yes'
-    } else if (action == "no") {
-        return "no"
-    }
-    return ""
 
+
+//modal
+const ModalDelete = (action = "yes", element = null) => {
+    modelDelete = document.querySelector("#modal-delete")
+    
+    if (action == "yes" && element != null) {
+        //ajax success
+        element.parentElement.parentElement.parentElement.remove()
+
+    }
+    if (overlay != null) {
+        overlay.style.display = "none"
+    }    
+    if (modelDelete != null) {
+        $("#modal-delete").remove()     
+    }
 }
-//modal end
-//                             YES NO DAN- PARENT PARENT DİYEREK İÇERİĞE ULAŞ VE SİL İÇERİĞİ THİS İLE GÖNDERSİN YANINDA TRUE GELİRSE SİL GELMEZSE DEFAULT FALSE SİLME AYNISI OVERLAY İÇİNDE DEFAULT FALSE SİLME
+
 const deleteComment = (e) => {
-    // var c = confirm("onay")
-    // console.log(c)
-    // ModalDelete("", "true") == "yes" ?
-    //     e.parentElement.parentElement.parentElement.parentElement.parentElement.remove() : "";
+    var comment = e.parentElement.parentElement.parentElement.parentElement.parentElement
+    comment.innerHTML += `<div id="modal-delete">
+    <p>Do you confirm this?</p>
+    <div class="modal-delete-footer">
+        <button onclick="ModalDelete('no')" class="no-btn"><i class="fa-solid fa-xmark"></i></button>
+        <button onclick="ModalDelete('yes',this)" class="yes-btn"><i
+                class="fa-solid fa-check fa-bounce"></i></button>
+
+        </div>
+    </div> `
+    overlay.style.display = "block"
 
 }
 
@@ -32,17 +38,17 @@ const deleteComment = (e) => {
 const userComments = document.querySelector(".comments-area .user-comments")
 const SendComment = (element) => {
     var commentText = element.parentElement.parentElement.querySelector("textarea").value
-
+    var darkMode = localStorage.getItem('selectedTheme') == 'dark' ? 'item-dark' : ''
     if (commentText.trim().length < 1) {
         toastr.warning("Comment area can't be empty")
     } else {
         //ajax
         //success döndü ekle 
         element.parentElement.parentElement.querySelector("textarea").value = ""
-        userComments.innerHTML += `<div class="comment">
+        userComments.innerHTML += `<div class="comment ${darkMode} ">
                 <div>
                     <div class="comment-info">
-                        <a class="userName" href="#userprofile">
+                        <a class="userName ${darkMode == "item-dark" ? "item-dark-text" : ""}" href="#userprofile">
                             <img src="assets/images/user_lego.jpg" class="comment-sender-img">
 
                             legoLover333 </a><small class="comment-date">1 second later</small>
@@ -68,6 +74,8 @@ const SendComment = (element) => {
                     </div>
 
                 </div>
+                
+
             </div>`
     }
 }
@@ -76,11 +84,16 @@ const SendComment = (element) => {
 //reply actions
 
 //active reply html
-var reply_div = `
-            <div class="comment reply-active">
+
+
+const replyComment = (element) => {
+    var darkMode = localStorage.getItem('selectedTheme') == 'dark' ? 'item-dark' : ''
+
+    var reply_div = `
+            <div class="comment ${darkMode == "item-dark" ? "dark" : ""} reply-active">
                 <div>
                     <div class="comment-info">
-                        <a class="userName" href="#userprofile">
+                        <a class="userName ${darkMode == "item-dark" ? "item-dark-text" : ""}" href="#userprofile">
                                 <img src="assets/images/user_lego.jpg" class="comment-sender-img">
 
                                 legoLover333
@@ -100,9 +113,6 @@ var reply_div = `
                     </div>
             </div>
         `;
-
-const replyComment = (element) => {
-
     if (document.querySelectorAll(".replies .reply-active").length == 0) {
         var repliesDiv = element.parentNode.parentNode.parentNode;
         repliesDiv.childNodes[7].innerHTML += reply_div
@@ -131,15 +141,16 @@ const reply = (element) => {
     if (replyMessage.trim().length < 1) {
         toastr.warning("Reply Message Can't be Empty")
     } else {
-        //ajax işlemi yapıldı
-        //success döndü
+        //ajax 
+        //success 
         var repliesDiv = element.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
         replyCancel()
+        var darkMode = localStorage.getItem('selectedTheme') == 'dark' ? 'item-dark' : ''
 
-        var reply_div = `<div class="comment">
+        var reply_div = `<div class="comment ${darkMode}">
                         <div>
                             <div class="comment-info">
-                                <a class="userName" href="#userprofile">
+                                <a class="userName ${darkMode == "item-dark" ? "item-dark-text" : ""}" href="#userprofile">
                                     <img src="assets/images/user_lego.jpg" class="comment-sender-img">
                                     legoLover333 
                                 </a><small class="comment-date">1 second later</small>

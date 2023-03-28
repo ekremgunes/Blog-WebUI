@@ -52,29 +52,7 @@
   border-radius: .6rem;
 }
 
-@media screen and (max-width: 380px) {
 
-    .keyHandler>button {
-        min-width: 12.5%;
-
-    }
-    .keyHandler>input {
-        float: left;
-        width: 85%;
-    }
-}
-@media screen and (max-width: 540px) {
-
-    .keyHandler>button {
-        min-width: 10%;
-        margin-left: .1rem;
-
-    }
-    .keyHandler>input {
-        float: left;
-        width: 89%;
-    }
-}
 .addedKeysHolder {
   float: left;
   width: 100%;
@@ -106,4 +84,35 @@
   line-height: .5;
   margin: auto;
   font-size: 1.5rem;
+}
+.editorArea{
+  margin: 0;
+  padding: 1.6rem;
+  color: black;
+  border-radius: 1.4rem;
+  background-color: white;
+  transition: .2s;
+}
+@media screen and (max-width: 380px) {
+
+    .keyHandler>button {
+        min-width: 12.5%;
+
+    }
+    .keyHandler>input {
+        float: left;
+        width: 85%;
+    }
+}
+@media screen and (max-width: 540px) {
+
+    .keyHandler>button {
+        min-width: 10%;
+        margin-left: .1rem;
+
+    }
+    .keyHandler>input {
+        float: left;
+        width: 89%;
+    }
 }

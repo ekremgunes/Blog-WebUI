@@ -95,7 +95,7 @@
 
         <section id="middle-forum-section" class="col-lg-9 col-12 ">
             <div class="post-area ">
-                <div class="post">
+                <div class="editorArea">
                     <div>
                         <div id="editor"></div>
                         <div>
@@ -283,7 +283,7 @@
                 $("#form-category").focus()
                 return
             }
-            
+
             var html = editor.getHTML()
             var editorController = checkEditor(html)
             if (editorController) {

@@ -2,15 +2,19 @@ const ThemeSwitch = document.querySelector('#switch-input')
 const MobileSwitch = document.querySelector("#mobileDarkSwitch")
 const body = document.body;
 const posts = document.querySelectorAll(".post")
+const editorArea = document.querySelector(".editorArea")
 
-const user_info = document.querySelector(".user-info")
-const footer_div = document.querySelector("#footer")
-const social_links = document.querySelectorAll("#footer #footer-social-links ul li a")
+const userInfo = document.querySelector(".user-info")
+const footerDiv = document.querySelector("#footer")
+const socialLinks = document.querySelectorAll("#footer #footer-social-links ul li a")
 
-const left_sidebar = document.querySelector(".left-div")
-const left_sidebar_links = document.querySelectorAll(".left-div ul li")
+const leftSidebar = document.querySelector(".left-div")
+const leftSidebarLinks = document.querySelectorAll(".left-div ul li")
+const filterDiv = document.querySelector(".filters")
 
-const comments = document.querySelectorAll(".comment")
+//theme classes
+const dark = "item-dark";
+const darkText = "item-dark-text";
 
 
 
@@ -47,62 +51,12 @@ MobileSwitch.addEventListener('click', () => {
 })
 
 const changeTheme = (theme) => {
+    const comments = document.querySelectorAll(".comment")
 
     if (theme == 'dark') {
         //swicht color of all area
 
         body.classList.replace('light', 'dark')
-
-        social_links.forEach(e => {
-            e.classList.add("hover-dark")
-
-        })
-        user_info.classList.add('item-dark')
-        footer_div.classList.add('item-dark')
-        posts.forEach(e => {
-            e.classList.add('item-dark')
-            e.querySelector(".post-info .post-date").classList.add("item-dark-text")
-            e.querySelector(".post-info .userName").classList.add("item-dark-text")
-            e.querySelector(".post-head").classList.add("item-dark-text")
-            e.querySelector(".post-inner").classList.add("item-dark-text")
-            e.querySelectorAll(".tag")
-                .forEach(t => { t.classList.add("item-dark-text") })
-            e.querySelectorAll("span").forEach(span => {
-                span.classList.add("item-dark-text")
-            })
-        })
-
-        if (left_sidebar != null) {
-            left_sidebar_links.forEach(element => {
-                element.classList.add("item-dark-text")
-            })
-            left_sidebar.classList.add('item-dark')
-
-        }
-        comments.forEach(element => {
-            element.classList.add("item-dark")
-            element.querySelectorAll("span").forEach(e => {
-                e.classList.add("item-dark-text")
-            })
-            element.querySelectorAll("a.userName").forEach(e => {
-                e.classList.add("item-dark-text")
-            })
-
-        })
-        if (document.querySelectorAll(".replies .reply-active").length == 1) {
-            const reply_active = document.querySelector(".replies .reply-active")
-            const reply_input = reply_active.querySelector(".reply-input")
-            reply_active.classList.add("reply-background")
-            reply_active.querySelectorAll("button").forEach(element => {
-                element.classList.add("item-dark-text")
-                console.log(element)
-            });
-            console.log(reply_active)
-            reply_input.classList.add("item-dark-text")
-            reply_input.classList.add("item-dark")
-        }
-
-
 
         //local storage
         if (localStorage.getItem('selectedTheme') != 'dark') {
@@ -110,61 +64,155 @@ const changeTheme = (theme) => {
             document.querySelector(".slider").classList.remove("slider-old-style")
 
         }
+        //other elements
+        socialLinks.forEach(e => {
+            e.classList.add("hover-dark")
+
+        })
+        userInfo.classList.add(dark)
+        footerDiv.classList.add(dark)
+        if (posts.length > 0) {
+            posts.forEach(e => {
+                e.classList.add(dark)
+                e.querySelector(".post-info .post-date").classList.add(darkText)
+                e.querySelector(".post-info .userName").classList.add(darkText)
+                e.querySelector(".post-head").classList.add(darkText)
+                e.querySelector(".post-inner").classList.add(darkText)
+                e.querySelectorAll(".tag")
+                    .forEach(t => { t.classList.add(darkText) })
+                e.querySelectorAll("span").forEach(span => {
+                    span.classList.add(darkText)
+                })
+            })
+        }
+        if (editorArea != null) {
+            editorArea.classList.add(dark)
+        }
+
+        if (leftSidebar != null) {
+            leftSidebarLinks.forEach(element => {
+                element.classList.add(darkText)
+            })
+            leftSidebar.classList.add(dark)
+
+        }
+        if (filterDiv!= null) {
+            filterDiv.classList.add(dark)
+            filterDiv.querySelectorAll("div:nth-child(1) button").forEach(e=>{
+                e.classList.add(dark)
+            }) 
+        }
+
+        if (comments.length > 0) {
+            comments.forEach(element => {
+                element.classList.add(dark)
+                element.querySelectorAll("span").forEach(e => {
+                    e.classList.add(darkText)
+                })
+                element.querySelectorAll("a.userName").forEach(e => {
+                    e.classList.add(darkText)
+                })
+
+            })
+        }
+
+        if (document.querySelector(".comment-textarea")) {
+            document.querySelector(".comment-textarea").classList.add(darkText)
+
+        }
+
+        if (document.querySelectorAll(".replies .reply-active").length == 1) {
+            const reply_active = document.querySelector(".replies .reply-active")
+            const reply_input = reply_active.querySelector(".reply-input")
+            reply_active.classList.add("reply-background")
+            reply_active.querySelectorAll("button").forEach(element => {
+                element.classList.add(darkText)
+            });
+            reply_input.classList.add(darkText)
+            reply_input.classList.add(dark)
+        }
 
     }
     else if (theme == 'light') {
         //swicht color of all area
         body.classList.replace('dark', 'light')
-        social_links.forEach(e => {
-            e.classList.remove("hover-dark")
-
-        })
-        user_info.classList.remove('item-dark')
-        footer_div.classList.remove('item-dark')
-        posts.forEach(e => {
-            e.classList.remove('item-dark')
-            e.querySelector(".post-info .post-date").classList.remove("item-dark-text")
-            e.querySelector(".post-info .userName").classList.remove("item-dark-text")
-            e.querySelector(".post-head").classList.remove("item-dark-text")
-            e.querySelector(".post-inner").classList.remove("item-dark-text")
-            e.querySelectorAll(".tag")
-                .forEach(t => {
-                    t.classList.remove("item-dark-text")
-                })
-            e.querySelectorAll("span").forEach(span => {
-                span.classList.remove("item-dark-text")
-            })
-        })
-
-        if (left_sidebar != null) {
-            left_sidebar.classList.remove('item-dark')
-            left_sidebar_links.forEach(element => {
-                element.classList.remove("item-dark-text")
-            })
-        }
-        comments.forEach(element => {
-            element.classList.remove("item-dark")
-            element.querySelector("a").classList.remove("item-dark-text")
-            element.querySelectorAll("span").forEach(e => {
-                e.classList.remove("item-dark-text")
-            })
-        })
-        if (document.querySelectorAll(".replies .reply-active").length == 1) {
-            const reply_active = document.querySelector(".replies .reply-active")
-            const reply_input = reply_active.querySelector(".reply-input")
-            reply_active.classList.remove("reply-background")
-            reply_active.querySelectorAll("button").forEach(element => {
-                element.classList.remove("item-dark-text")
-            });
-            reply_input.classList.remove("item-dark-text")
-            reply_input.classList.remove("item-dark")
-        }
 
         //local storage
         if (localStorage.getItem('selectedTheme') == 'dark') {
             localStorage.removeItem('selectedTheme')
             document.querySelector(".slider").classList.add("slider-old-style")
         }
+        //other  elements
+
+        socialLinks.forEach(e => {
+            e.classList.remove("hover-dark")
+
+        })
+        userInfo.classList.remove(dark)
+        footerDiv.classList.remove(dark)
+
+
+        if (leftSidebar != null) {
+            leftSidebar.classList.remove(dark)
+            leftSidebarLinks.forEach(element => {
+                element.classList.remove(darkText)
+            })
+        }
+        if (posts.length > 0) {
+            posts.forEach(e => {
+                e.classList.remove(dark)
+                e.querySelector(".post-info .post-date").classList.remove(darkText)
+                e.querySelector(".post-info .userName").classList.remove(darkText)
+                e.querySelector(".post-head").classList.remove(darkText)
+                e.querySelector(".post-inner").classList.remove(darkText)
+                e.querySelectorAll(".tag")
+                    .forEach(t => {
+                        t.classList.remove(darkText)
+                    })
+                e.querySelectorAll("span").forEach(span => {
+                    span.classList.remove(darkText)
+                })
+            })
+        }
+        if (editorArea != null) {
+            editorArea.classList.remove(dark)
+        }
+        if (filterDiv!= null) {
+            filterDiv.classList.remove(dark)
+            filterDiv.querySelectorAll("div:nth-child(1) button").forEach(e=>{
+                e.classList.remove(dark)
+            }) 
+
+        }
+        if (comments.length > 0) {
+            comments.forEach(element => {
+                element.classList.remove(dark)
+
+                element.querySelectorAll("span").forEach(e => {
+                    e.classList.remove(darkText)
+                })
+                element.querySelectorAll("a.userName").forEach(e => {
+                    e.classList.remove(darkText)
+                })
+            })
+        }
+
+        if (document.querySelector(".comment-textarea")) {
+            document.querySelector(".comment-textarea").classList.remove(darkText)
+
+        }
+        if (document.querySelectorAll(".replies .reply-active").length == 1) {
+            const reply_active = document.querySelector(".replies .reply-active")
+            const reply_input = reply_active.querySelector(".reply-input")
+            reply_active.classList.remove("reply-background")
+            reply_active.querySelectorAll("button").forEach(element => {
+                element.classList.remove(darkText)
+            });
+            reply_input.classList.remove(darkText)
+            reply_input.classList.remove(dark)
+        }
+
+
 
     }
 }
