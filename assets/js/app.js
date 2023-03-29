@@ -26,8 +26,21 @@ function searchPost(e) {
     toastr.warning("Search input can't be empty")    
 }
 
+function LoadMore(element) {
+    var hourglassIcon = document.querySelector(".fa-hourglass")
+    //code
+    element.style.display = "none"
+    hourglassIcon.style.display = "inline-block"
+    //action is done
+    //fake action timing
+    setTimeout(() => {
+        element.style.display = "inline-block"
+        hourglassIcon.style.display = "none"
+    }, 2000);
 
-function follow(userId) {
+}
+
+function follow(element,userId) {
     //actions
     
 }

@@ -69,7 +69,10 @@ const changeTheme = (theme) => {
             e.classList.add("hover-dark")
 
         })
-        userInfo.classList.add(dark)
+        if (userInfo!= null) {
+           userInfo.classList.add(dark) 
+        }
+        
         footerDiv.classList.add(dark)
         if (posts.length > 0) {
             posts.forEach(e => {
@@ -151,7 +154,10 @@ const changeTheme = (theme) => {
             e.classList.remove("hover-dark")
 
         })
+        if (userInfo != null) {
         userInfo.classList.remove(dark)
+            
+        }
         footerDiv.classList.remove(dark)
 
 

@@ -48,11 +48,8 @@
                     <a href="/write.html">
                         <li><i class="fa-sharp fa-solid fa-feather"></i>Write</li>
                     </a>
-                    <a href="#">
-                        <li><i class="fa-regular fa-bell"></i>Notify</li>
-                    </a>
-                    <a href="#">
-                        <li><i class="fa-regular fa-user"></i>User</li>
+                    <a href="/login.html">
+                        <li><i class="fa-solid fa-right-to-bracket"></i></li>
                     </a>
 
                     <li class="switch-parent">
@@ -71,9 +68,6 @@
                             <a href="write.html" title="about">Write</a>
                         </li>
                         <li>
-                            <a href="user.html" title="skills">User</a>
-                        </li>
-                        <li>
                             <a href="login.html" title="jobs">Login</a>
                         </li>
                         <li class="switch-parent">
@@ -86,32 +80,32 @@
             </div>
         </div>
     </header>
-    <main id="main" class="row px-2 px-lg-3 mx-1 mx-md-3 mx-lg-4">
+    <main id="main" class="row px-2  mx-1 mx-lg-2">
 
         <section id="left-forum-section" class=" col-md-12 col-lg-2">
             <div class="left-div">
-                <h5>Kategoriler</h5>
+                <h5>Categories</h5>
                 <ul class="">
                     <a href="">
-                        <li>Akış</li>
+                        <li>Flow</li>
                     </a>
                     <a href="">
-                        <li>Popüler</li>
+                        <li>Popular</li>
                     </a>
                     <a href="">
-                        <li>Teknoloji</li>
+                        <li>Technology</li>
                     </a>
                     <a href="">
-                        <li>Giyim</li>
+                        <li>Dress</li>
                     </a>
                     <a href="">
-                        <li>Finans</li>
+                        <li>Finance</li>
                     </a>
                     <a href="">
-                        <li>Doğa</li>
+                        <li>Nature</li>
                     </a>
                     <a href="">
-                        <li>Spor</li>
+                        <li>Sport</li>
                     </a>
 
                 </ul>
@@ -121,7 +115,8 @@
         <section id="middle-forum-section" class="col-lg-7 col-md-12 ">
             <div id="nav-search">
                 <input id="search-input" type="text" placeholder="search">
-                <a onclick="searchPost(this)" href="javascript:void(0)" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a onclick="searchPost(this)" href="javascript:void(0)" id="search-icon"><i
+                        class="fa-solid fa-magnifying-glass"></i></a>
             </div>
             <div class="filters">
                 <div class="row">
@@ -332,7 +327,10 @@
                 <!-- EXAMPLES end-->
 
             </div>
-            <div class="text-center"><button class="btn-load-more">Load More</button></div>
+            <div class="text-center">
+                <button onclick="LoadMore(this)" class="btn-load-more">Load More</button>
+                <i class="fa-solid fa-hourglass fa-bounce fa-2xl"></i>
+            </div>
 
         </section>
 
@@ -348,29 +346,72 @@
             </div> -->
 
             <div id="footer">
-                <div  id="footer-recommended">
-                    <h5>Recommended Users</h5>
-                    <ul>
-                        <li><a href="/">
-                            <img src="assets/images/user_man.jpg" alt="">
-                            <h6>Jhon42</h6>
-                            <!-- fake user id using -->
-                            <button onclick="follow(1)" class="btn-recomended-follow"><i class="fa-solid fa-plus"></i></button>
-                        </a></li>
-                    </ul>
+                <!-- maks 4-5 user profile ideal -->
+                <div id="footer-recommended">
+                    <h5>Popular Users</h5>
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="/login.html">
+                                    <img src="assets/images/user_man.jpg" alt="">
+                                    <h6>Jhon42</h6>
+                                    <!-- fake user id using -->
+                                    <button onclick="" class="btn-recomended-follow"><i
+                                            class="fa-solid fa-plus"></i></button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/login.html">
+                                    <img src="assets/images/ekrem gunes-logos.jpeg" alt="">
+                                    <h6>Jhon42</h6>
+                                    <!-- fake user id using -->
+                                    <button onclick="" class="btn-recomended-follow">
+                                        <i class="fa-solid fa-plus"></i> 
+                                        <!-- <i class="fa-solid fa-check"></i> -->
+                                    </button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/login.html">
+                                    <img src="assets/images/user_woman.jpg" alt="">
+                                    <h6>Natalia</h6>
+                                    <!-- fake user id using -->
+                                    <button onclick="" class="btn-recomended-follow"><i
+                                            class="fa-solid fa-plus"></i></button>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/login.html">
+                                    <img src="assets/images/user_lego.jpg" alt="">
+                                    <h6>legoLowe333</h6>
+                                    <!-- fake user id using -->
+                                    <button onclick="" class="btn-recomended-follow"><i
+                                            class="fa-solid fa-plus"></i></button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div id="footer-social-links">
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/in/ekremgunes/"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
-                        <li><a href="#"><i class="fa-brands fa-github"></i>Github</a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-                    </ul>
+                    <div>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/in/ekremgunes/"><i
+                                        class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                            <li><a href="#"><i class="fa-brands fa-github"></i>Github</a></li>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                        </ul>
+                    </div>
+
                 </div>
-                
+
 
             </div>
-            <div class="text-center small footer-links col-12"> &#x2022; <a href="">About</a> &#x2022;<a href="privacy">Privacy-Policy</a> &#x2022; Copyright <i><a style="color: #c79005;margin: .2rem;" href="http://gunesekrem.com">gunesekremcom</a></i>  <script>var date = new Date();document.write(date.getFullYear()); </script> &copy;</div>
+            <div class="text-center small footer-links mb-2 col-12"> &#x2022; <a href="">About</a> &#x2022;<a
+                    href="privacy">Privacy-Policy</a> &#x2022; Copyright <i><a style="color: #c79005;margin: .2rem;"
+                        href="http://gunesekrem.com">gunesekremcom</a></i>
+                <script>var date = new Date(); document.write(date.getFullYear()); </script> &copy;
+            </div>
         </section>
 
     </main>

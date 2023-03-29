@@ -225,8 +225,8 @@ a {
     color: black;
     border-radius: 1.4rem;
     background-color: white;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    margin-top: 1rem;
     min-width: 39rem;
     transition: .2s;
 }
@@ -399,58 +399,41 @@ a {
     background-color: white;
     border-radius: 1.5rem;
     margin-bottom: 1rem;
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
+    display: block;
 }
 
 .footer-links {
-    padding: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 
 .footer-links a {
     color: black;
     margin: 0 0.35rem;
     transition: .5s;
-    font-size: small;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
     color: black;
     border-bottom: 1px solid black;
+    cursor:help ;
 }
-
-#footer-recommended {
-    border: 1px solid black;
-}
-
-#footer-recommended ul {
-    list-style: none;
-}
-
-#footer-recommended h6 {
-    font-size: 10pt;
-    display: inline;
-    margin-left: .5rem;
-}
-
-#footer-recommended img {
-    width: 2.2rem;
-    border-radius: 50%;
-    list-style: none;
+.btn-recomended-follow{
+    float: right;
 }
 
 #footer-social-links {
-    margin-bottom: 1rem;
     padding: .3rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.178);
-
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.178); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer-social-links ul {
     margin: 0;
     padding: 0;
-    padding-bottom: .8rem;
 
 }
 
@@ -458,7 +441,7 @@ a {
     padding-top: .3rem;
     list-style: none;
     margin-left: 1rem;
-    text-align: left;
+    text-align: justify;
 }
 
 #footer ul li a {
@@ -510,6 +493,38 @@ a {
     text-align: center;
 }
 
+#footer-recommended {
+    border-bottom: 1px solid var(--border_color);
+}
+
+#footer-recommended ul {
+    list-style: none;
+    padding-left: 1px;
+}
+#footer-recommended ul li{
+    margin-bottom: .4rem;
+    text-align: justify;
+}
+
+#footer-recommended h6 {
+    font-size: 8.5pt;
+    display: inline;
+    margin-left: 1px;
+    color: gray !important;
+}
+#footer-recommended h5{
+    border-bottom: 1px solid var(--border_color);
+    margin: .5rem;
+    margin-bottom: 1rem;
+    padding: .3rem;
+}
+
+#footer-recommended img {
+    width: 2rem;
+    border-radius: 50%;
+    list-style: none;
+    margin-bottom: 5px;
+}
 .btn-recomended-follow {
     border-radius: 50%;
     padding: 3px 1px 3px .6rem;
@@ -520,9 +535,11 @@ a {
     font-weight: bold;
     text-decoration: wavy;
     color: var(--dark_primary);
-    margin-left: 2rem;
+    margin-left: .2rem;
 }
-
+.btn-recomended-follow ul{
+    padding: 2px;
+}
 .btn-recomended-follow i {
     font-size: smaller !important;
     color: black;
@@ -533,7 +550,22 @@ a {
     color: white !important;
     box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
 }
-
+.btn-load-more{
+    border-radius: .5rem;
+    padding: .4rem 1.5rem .4rem 1.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--dark_light);
+    transition: .33s;
+    font-weight: bold;
+    text-decoration: wavy;
+    color: var(--dark_primary);
+}
+.btn-load-more:hover{
+    border-radius: 0;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
+}
 .btn-follow {
     border-radius: .5rem;
     padding: .4rem 1.5rem .4rem 1.5rem;
@@ -551,4 +583,10 @@ a {
     color: white;
     box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
 
+}
+
+div i.fa-hourglass{
+    display: none ;
+    margin-bottom: 1rem;
+    margin-top: 1.1rem;
 }
