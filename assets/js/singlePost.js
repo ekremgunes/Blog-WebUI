@@ -259,7 +259,25 @@ function toggleComments() {
 }
 
 
-function follow(element,userId) {
-    //actions
+function follow(element, userId) {
+    var followersCountSpan = document.querySelector("#follower-count")
+    var regex = /\D/g; // only numbers
     
+    if (element.classList.contains("followed")) {
+        //ajax fetchAPI action  -- unfollow
+        element.classList.remove("followed")
+        element.textContent = "follow"
+        if (!regex.test(followersCountSpan.textContent)) { // contains other thins (char,special c.)
+            followersCountSpan.textContent = parseInt(followersCountSpan.textContent) - 1
+        }
+    } else {
+        //ajax fetchAPI action  ++ follow
+        element.textContent = "followed"
+        element.classList.add("followed")
+        if (!regex.test(followersCountSpan.textContent)) {// contains other thins (char,special c.)
+            followersCountSpan.textContent = parseInt(followersCountSpan.textContent) + 1
+        }
+
+    }
+
 }
