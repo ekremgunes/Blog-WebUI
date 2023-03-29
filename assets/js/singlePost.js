@@ -259,3 +259,7 @@ function toggleComments() {
 }
 
 
+function follow(element,userId) {
+    //actions
+    
+}

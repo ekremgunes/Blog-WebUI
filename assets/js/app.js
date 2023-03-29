@@ -40,7 +40,3 @@ function LoadMore(element) {
 
 }
 
-function follow(element,userId) {
-    //actions
-    
-}
