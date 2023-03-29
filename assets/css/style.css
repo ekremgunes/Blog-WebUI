@@ -26,7 +26,8 @@ body {
     margin-top: .8rem;
     margin-left: 1.4rem;
 }
-@media screen and (max-width:1024px){
+
+@media screen and (max-width:1024px) {
     #nav-search {
         margin-top: .7rem;
     }
@@ -41,7 +42,7 @@ body {
     min-width: max-content;
     height: 2.6rem;
     border: none;
-    background-color: rgba(204, 204, 204, 0.39);
+    background-color: rgba(236, 236, 236, 0.95);
     outline: none;
     min-width: 99%;
     font-weight: bold;
@@ -130,26 +131,30 @@ a {
     font-size: large;
     transition: .5s;
 }
-.filters div:nth-child(1) button:first-child i{
+
+.filters div:nth-child(1) button:first-child i {
     color: rgba(172, 49, 27, 0.788);
     transition: ease-out .5s;
     margin-right: .15rem;
 }
-.filters div:nth-child(1) button:last-child i{
+
+.filters div:nth-child(1) button:last-child i {
     color: rgba(35, 102, 122, 0.753);
     transition: ease-out .5s;
     font-weight: 900;
     font-size: 1.3rem;
     margin-right: .2rem;
-    
+
 }
-.filters div:nth-child(1) button:first-child:hover i{
+
+.filters div:nth-child(1) button:first-child:hover i {
     color: rgb(226, 54, 24);
-    transform:scale(1.2);
+    transform: scale(1.2);
 }
-.filters div:nth-child(1) button:last-child:hover i{
+
+.filters div:nth-child(1) button:last-child:hover i {
     color: rgba(16, 126, 230, 0.938);
-    transform:scale(1.2);
+    transform: scale(1.2);
 }
 
 .filters div:nth-child(2) {
@@ -158,40 +163,48 @@ a {
     justify-content: right;
 
 }
-.countryFilterDiv select{
+
+.countryFilterDiv select {
     padding: 0.4rem 2rem;
     border: none;
     border-radius: .6rem;
     font-weight: 600;
-    
+
 }
-.countryFilterDiv select option{
+
+.countryFilterDiv select option {
     color: rgba(0, 0, 0, 0.616);
     font-size: 1rem;
 }
-#worldIcon{
+
+#worldIcon {
     transition: ease-in .5s;
 }
+
 @media screen and (max-width:480px) {
-    .countryFilterDiv select{
+    .countryFilterDiv select {
         padding: 0.3rem .5rem;
     }
-    .filters div:nth-child(1) button{
+
+    .filters div:nth-child(1) button {
         padding: 0.3rem;
         margin: 0;
         margin-right: .2rem;
     }
 }
+
 @media screen and (max-width:531px) {
-    .filters div:nth-child(2) i{
+    .filters div:nth-child(2) i {
         display: none;
     }
 }
-.countryFilterDiv select option{
+
+.countryFilterDiv select option {
 
     background-color: var(--dark-primary);
 }
-.countryFilterDiv i{
+
+.countryFilterDiv i {
     margin-right: .5rem;
     font-size: larger;
 }
@@ -385,8 +398,46 @@ a {
     padding: 1rem;
     background-color: white;
     border-radius: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+}
 
+.footer-links {
+    padding: .5rem;
+}
+
+.footer-links a {
+    color: black;
+    margin: 0 0.35rem;
+    transition: .5s;
+    font-size: small;
+}
+
+.footer-links a:hover {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+#footer-recommended {
+    border: 1px solid black;
+}
+
+#footer-recommended ul {
+    list-style: none;
+}
+
+#footer-recommended h6 {
+    font-size: 10pt;
+    display: inline;
+    margin-left: .5rem;
+}
+
+#footer-recommended img {
+    width: 2.2rem;
+    border-radius: 50%;
+    list-style: none;
 }
 
 #footer-social-links {
@@ -451,12 +502,36 @@ a {
 }
 
 .user-info h6 {
-    color: var(--dark_light);
+    color: grey;
 
 }
 
 .user-info p {
     text-align: center;
+}
+
+.btn-recomended-follow {
+    border-radius: 50%;
+    padding: 3px 1px 3px .6rem;
+    outline: none;
+    border: none;
+    background-color: var(--dark_light);
+    transition: .35s ;
+    font-weight: bold;
+    text-decoration: wavy;
+    color: var(--dark_primary);
+    margin-left: 2rem;
+}
+
+.btn-recomended-follow i {
+    font-size: smaller !important;
+    color: black;
+}
+
+.btn-recomended-follow:hover,
+.btn-recomended-follow:hover i {
+    color: white !important;
+    box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
 }
 
 .btn-follow {
@@ -474,10 +549,6 @@ a {
 .btn-follow:hover {
     border-radius: 0;
     color: white;
-    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
 
 }
-
-/* ***** 
-         RİGHT  BAR CSS  END
-****** */

@@ -227,7 +227,7 @@ postLike.addEventListener('click', () => {
         toastr.warning("Post id can't found, refresh your page")
         return
     }
-    if (!postLike.classList.contains("red-color")) { //it mean this post, not liked before "!"
+    if (!postLike.classList.contains("red-color")) { //it mean this post, not liked before 
         //ajax - fetch ++ with postId
         postLike.parentElement.lastElementChild.innerHTML = `${++fakeLikeCount}`
         if (postLike.classList.contains("animate-heart-remove")) {
@@ -259,7 +259,3 @@ function toggleComments() {
 }
 
 
-function follow(userId) {
-    //actions
-    
-}

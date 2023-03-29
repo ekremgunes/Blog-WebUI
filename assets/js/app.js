@@ -25,3 +25,9 @@ function searchPost(e) {
     }
     toastr.warning("Search input can't be empty")    
 }
+
+
+function follow(userId) {
+    //actions
+    
+}

@@ -1,14 +1,14 @@
 :root {
-  --light_secondary: rgb(235, 182, 49);
+  --light_secondary: #ffb803;
   --light_dark: #1e0521;
   --dark_primary: rgb(22, 22, 22);
   --dark_secondary: rgba(129, 131, 132, 0.5);
-  --dark_light: #9a9b9c;
+  --dark_light: #96a3da;
   --dark_theme: #1d2226;
 }
 
 .light {
-  background-color: #ebeaea;
+  background-color: #d4d1d0;
   transition: .3s;
 
 }

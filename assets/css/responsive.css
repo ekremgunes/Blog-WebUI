@@ -2,8 +2,9 @@
     #right-forum-section {
         width: 92%;
     }
-    #footer-social-links ul li{
-        text-align: center;
+
+    #footer-social-links ul li {
+        text-align: right;
     }
 
     #middle-forum-section {
@@ -20,16 +21,36 @@
         padding-left: 0;
         margin-left: .7rem;
     }
+
+   
 }
 
 @media screen and (max-width:1024px) {
-    html,body{
+
+    html,
+    body {
         overflow-x: hidden !important;
 
     }
+
+    #modal-delete p {
+        margin: 0 !important;
+    }
+
+    .modal-delete-footer button {
+        margin: 0;
+        margin-top: .5rem;
+
+    }
+
+    .modal-delete-footer .no-btn {
+        margin-right: .3rem !important;
+    }
+
     #right-forum-section {
         width: 100%;
     }
+
     #middle-forum-section {
         width: 100%;
         margin-left: .1rem;
@@ -38,13 +59,15 @@
     .post {
         min-width: 17rem;
     }
-    .left-div ul li:hover{
+
+    .left-div ul li:hover {
         padding-right: 1rem;
     }
+
     #left-forum-section {
-        width: 100% ;
-        padding-left: 0 ;
-        margin-left: 1rem ;
+        width: 100%;
+        padding-left: 0;
+        margin-left: 1rem;
     }
 
     .left-div {
@@ -59,46 +82,54 @@
         width: 98%;
         overflow-x: scroll;
     }
-     
+
 }
 
 
 /* medium */
 @media screen and (max-width: 922px) {
 
-    .left-div ul{
+    .left-div ul {
         padding-left: 2rem;
-    } 
+    }
 
 }
+
 @media screen and (max-width: 750px) {
 
-    #nav-links{
+    #nav-links {
         display: none;
-    } 
+    }
 
 }
+
 /* small screen */
 @media screen and (max-width: 540px) {
-    .left-div ul{
+    .left-div ul {
         padding-left: 10.8rem;
-    } 
+    }
 
     .post {
         min-width: 15rem;
+    }
+
+    .replies {
+        width: 90% !important;
     }
 
     .post-img-div {
         justify-content: start;
     }
 }
+
 @media screen and (max-width: 380px) {
-    .left-div ul{
+    .left-div ul {
         padding-left: 13rem;
-    } 
+    }
 }
+
 @media screen and (max-width: 350px) {
-    .left-div ul{
+    .left-div ul {
         padding-left: 16rem;
-    } 
+    }
 }

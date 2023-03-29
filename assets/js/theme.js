@@ -120,6 +120,9 @@ const changeTheme = (theme) => {
             document.querySelector(".comment-textarea").classList.add(darkText)
 
         }
+        if (document.querySelector(".toggle-comments")) {
+            document.querySelector(".toggle-comments").classList.add(dark)
+        }
 
         if (document.querySelectorAll(".replies .reply-active").length == 1) {
             const reply_active = document.querySelector(".replies .reply-active")
@@ -200,6 +203,9 @@ const changeTheme = (theme) => {
         if (document.querySelector(".comment-textarea")) {
             document.querySelector(".comment-textarea").classList.remove(darkText)
 
+        }
+        if (document.querySelector(".toggle-comments")) {
+            document.querySelector(".toggle-comments").classList.remove(dark)
         }
         if (document.querySelectorAll(".replies .reply-active").length == 1) {
             const reply_active = document.querySelector(".replies .reply-active")

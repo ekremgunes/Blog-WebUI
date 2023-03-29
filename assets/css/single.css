@@ -54,11 +54,12 @@
 }
 
 .comments-area {
-    /* display: none;                                       */    
+     display: none;                                          
 }
 
 .comment-inner {
     margin-left: 1rem;
+    padding-right: .5rem;
 }
 
 .comment-sender-img {
@@ -390,6 +391,9 @@
 @media screen and (min-width:1200px) {
     .comment {
         width: 97%;
+    }
+    .toggle-comments {
+        width: 95%;
     }
 }
 
