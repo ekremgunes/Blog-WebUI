@@ -1,7 +1,6 @@
 :root {
 
     --light_secondary: #ffb803;
-    /* --light_secondary: rgb(235, 182, 49); */
     --light_secondary_alfa: rgba(226, 178, 55, 0.719);
     --dark_primary: rgb(41, 41, 41);
     --dark_secondary: rgba(129, 131, 132, 0.5);

@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sıgn up</title>
+    <title>Login</title>
+    <!-- custom css -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/loginSignup.css">
+
+    <!-- libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
+        integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
+    <link rel="stylesheet" href="assets/css/hamburgermenu.css">
+    <!-- particle js-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    
+    <div class="overlay"></div>
+    <div id="particles-js" ></div>
+
+    <main class="centerDiv">
+        <div>
+          <div class="form_login_signup">
+            <div>
+                <label for="Name">Name</label><br>
+                <input id="Name" type="text">
+                <span></span>
+            </div>
+            <div>
+                <label for="Password">Password</label><br>
+                <input id="Password" type="text">
+                <span></span>
+            </div>
+            <div class="text-center">
+                <button id="login_signUp_btn" onclick="SignUp()">Login</button>
+            </div>
+        </div>  
+        </div>
+        
+    </main>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/libs/toastr/toastr.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/Account.js"></script>
+    <script src="assets/js/hamburgermenu.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        particlesJS("particles-js", {
+          "particles": {
+            "number": {
+              "value": 100
+            },
+            "size": {
+              "value": 3
+            }
+          },
+          "interactivity": {
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "repulse"
+              }
+            }
+          }
+        });
+      </script>
+      
 </body>
+
 </html>
