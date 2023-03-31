@@ -52,7 +52,7 @@
     right: 0;
     top: 0;
     position: absolute;
-    background-color: var(--light_secondary);
+    background-color: var(--golden);
     border-radius: 50%;
     z-index: 18;
     overflow: hidden;
@@ -102,7 +102,7 @@
     float: left;
     line-height: 40px;
     transition: .5s;
-    border-right: 1px solid var(--light_secondary);
+    border-right: 1px solid var(--golden);
     padding-right: .5rem;
 }
 
@@ -136,7 +136,7 @@
     right: -160px;
     top: -160px;
     border-radius: 50%;
-    background-color: var(--light_secondary);
+    background-color: var(--golden);
 }
 
 .oppenned span:nth-child(3) {

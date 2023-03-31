@@ -40,21 +40,21 @@ body{
     padding: 1.5rem;
 }
 #login_signUp_btn{
-    padding: .3rem 1.45rem;
+    padding: .3rem 2.45rem;
     border: none;
     outline: none;
     border-radius: .4rem;
-    border: 1px solid var(--dark_light);
+    border: 1px solid var(--light_blue);
     transition: .4s;
     color: white;
-    background-color: var(--dark_light);
+    background-color: var(--light_blue);
 
 }
 #login_signUp_btn:hover,
 #login_signUp_btn:focus
 {
-    color: var(--dark_light);
-    border: 1px solid var(--dark_light);
+    color: var(--light_blue);
+    border: 1px solid var(--light_blue);
     background-color: white;
 }
 #particles-js{

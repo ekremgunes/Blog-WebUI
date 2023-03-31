@@ -80,13 +80,13 @@ body {
 #nav-links ul li {
     padding: .2rem 1rem .2rem 1rem;
     margin-right: 1.5rem;
-    background-color: var(--light_secondary);
+    background-color: var(--golden);
     border-radius: 1rem;
 }
 
 #nav-links ul li i {
     margin-right: .5rem;
-    background-color: var(--light_secondary);
+    background-color: var(--golden);
 
 }
 
@@ -530,7 +530,7 @@ a {
     padding: 3px 1px 3px .6rem;
     outline: none;
     border: none;
-    background-color: var(--dark_light);
+    background-color: var(--light_blue);
     transition: .35s ;
     font-weight: bold;
     text-decoration: wavy;
@@ -555,7 +555,7 @@ a {
     padding: .4rem 1.5rem .4rem 1.5rem;
     outline: none;
     border: none;
-    background-color: var(--dark_light);
+    background-color: var(--light_blue);
     transition: .33s;
     font-weight: bold;
     text-decoration: wavy;
@@ -571,7 +571,7 @@ a {
     padding: .4rem 1.5rem .4rem 1.5rem;
     outline: none;
     border: none;
-    background-color: var(--dark_light);
+    background-color: var(--light_blue);
     transition: .33s;
     font-weight: bold;
     text-decoration: wavy;

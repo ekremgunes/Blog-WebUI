@@ -7,11 +7,11 @@
     background-color: rgba(209, 209, 209, 0.596);
 }
 .write-btn:first-child{
-    background-color: var(--light_secondary);
+    background-color: var(--golden);
 }
 .write-btn:hover{
     border-radius: 0;
-    background-color: var(--light_secondary);
+    background-color: var(--golden);
 
 }
 .form-control:focus{
@@ -31,7 +31,7 @@
   min-width: 6%;
   border: none;
   outline: none !important;
-  background: var(--light_secondary);
+  background: var(--golden);
   border-radius: .7rem;
   color: white;
   cursor: pointer;
