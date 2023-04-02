@@ -17,7 +17,23 @@ body {
     padding-bottom: .2rem;
     
 }
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    background-color: var(--golden_alfa);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: .4s;
+}
 
+.back-to-top:hover {
+    color: white;
+    background-color: #333;
+}
 #nav-search {
     display: flex;
     align-items: center;

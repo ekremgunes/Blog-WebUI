@@ -221,23 +221,7 @@
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/theme.js"></script>
-    <script>
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > (document.body.scrollHeight * 0.15) ||
-                document.documentElement.scrollTop > (document.documentElement.scrollHeight * 0.15)) {
-                document.querySelector('.back-to-top').style.display = "block";
-            } else {
-                document.querySelector('.back-to-top').style.display = "none";
-            }
-        }
-
-        document.querySelector('.back-to-top').addEventListener('click', function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-    </script>
+    
 
     <script>
         const imageUpload = document.querySelector('.image-upload')

@@ -1,3 +1,5 @@
+window.onscroll = function () { scrollFunction() }
+
 function filterCountry(countryId) {
     //code
     console.log(countryId)
@@ -14,16 +16,16 @@ function filterTop(params) {
 function filterHot(params) { //new
     //code
     console.log("hots")
-    
+
 }
 function searchPost(e) {
     //code
     var searchValue = e.parentElement.querySelector("#search-input").value
     if (searchValue != "") {
         //searh
-    
+
     }
-    toastr.warning("Search input can't be empty")    
+    toastr.warning("Search input can't be empty")
 }
 
 function LoadMore(element) {
@@ -40,3 +42,17 @@ function LoadMore(element) {
 
 }
 
+
+function scrollFunction() {
+    if (document.body.scrollTop > (document.body.scrollHeight * 0.15) ||
+        document.documentElement.scrollTop > (document.documentElement.scrollHeight * 0.15)) {
+        document.querySelector('.back-to-top').style.display = "block"
+    } else {
+        document.querySelector('.back-to-top').style.display = "none"
+    }
+}
+
+document.querySelector('.back-to-top').addEventListener('click', function () {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+});
