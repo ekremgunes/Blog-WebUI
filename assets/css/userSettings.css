@@ -1,0 +1,100 @@
+.user-settings {
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+
+    border-radius: 1rem;
+    justify-content: center;
+    width: 90%;
+}
+
+.settings-area {
+    background-color: white;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.settings-area input {
+    margin-bottom: 1.2rem;
+}
+.image-upload {
+    position: relative;
+    display: inline-block;
+    width: 12.5rem;
+    height: 12.5rem;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.preview-image {
+    display: block;
+    width: 12.5rem;
+    height: 12.5rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.image-label {
+    display: block;
+    position: relative;
+}
+
+.image-input {
+    display: none;
+}
+
+.cancel-button {
+    margin-right: 3rem;
+    position: absolute;
+    margin-left: 10rem;
+    border-radius: 50%;
+    border: none;
+    padding: .2rem .55rem;
+    z-index: 2;
+    margin-top: .5rem;
+    background-color: #444444;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: .2s;
+}
+.cancel-button:hover{
+    opacity: 1;
+}
+
+.user-pp-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.preview-image:not([src="default-image.png"]):hover {
+    opacity: 0.8;
+}
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    background-color: var(--golden_alfa);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.back-to-top:hover {
+    color: white;
+    background-color: #333;
+}
+@media screen and (max-width: 1200px) {
+    #right-forum-section {
+        width: 100%;
+        order: 3;
+    }
+}

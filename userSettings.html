@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic page need -->
+    <title>Create Content</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta tag -->
+    <meta name="description" content="Blog Sinlge">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/single.css">
+    <!-- libs -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css"
+        integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/write.css">
+    <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
+
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+
+    <link rel="stylesheet" href="assets/css/userSettings.css">
+    <link rel="stylesheet" href="assets/css/hamburgermenu.css">
+    <style>
+
+    </style>
+</head>
+
+
+<body class="light">
+    <header class="mx-lg-4 mx-3">
+        <div class="nav-area container-fluid  px-3 px-lg-5">
+
+            <div id="nav-logo">
+                <a href="/index.html">
+                    <img src="assets/images/ekrem gunes-logos.jpeg" width="45rem" style="border-radius: 50%;"
+                        alt="LOGO">
+
+                </a>
+            </div>
+
+            <div id="nav-links">
+                <ul>
+                    <a href="/write.html">
+                        <li><i class="fa-sharp fa-solid fa-feather"></i>Write</li>
+                    </a>
+                    <a href="#">
+                        <li><i class="fa-regular fa-bell"></i></li>
+                    </a>
+                    <a href="#">
+                        <!-- needs modal or another thing-->
+                        <li><i class="fa-solid fa-gear"></i></li>
+                    </a>
+
+                    <li class="switch-parent">
+                        <label class="switch">
+                            <input id="switch-input" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div id="hamburgerDiv" class="open">
+                <span class="cls"></span>
+                <span>
+                    <ul class="sub-menu ">
+                        <li>
+                            <a href="write.html" title="about">Write</a>
+                        </li>
+                        <li>
+                            <a href="userSettings.html" title="skills">Settings</a>
+                        </li>
+                        <li>
+                            <!-- modal or another solution needs here -->
+                            <a href="notifcati.html" title="jobs">Notification</a>
+                        </li>
+                        <li class="switch-parent">
+                            <a href="javascript:void(0)" id="mobileDarkSwitch">Dark Mode</a>
+
+                        </li>
+                    </ul>
+                </span>
+                <span class="cls"></span>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="row px-2 px-lg-3 mx-1 mx-md-3 mx-lg-4">
+
+
+        <section id="middle-forum-section" class="col-lg-9 col-12 ">
+            <div class="post-area ">
+                <div class="settings-area">
+                    <div>
+                        <div class="mb-2 text-center">
+                            <h2>Account Settings</h2>
+                            <hr style="margin-top: 0;">
+                        </div>
+                        <div class="user-pp-div">
+                            <button onclick="cancelImageUpload()" class="cancel-button"
+                                aria-label="Cancel image upload">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <div class="image-upload">
+                                <label for="image-input" class="image-label">
+                                    <img class="preview-image" src="assets/images/core/default-user-pp.png">
+
+                                </label>
+
+                                <input onchange="console.log(this)" type="file"
+                                    value="assets/images/core/default-user-pp.png" id="image-input" class="image-input">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="form-label" for="">UserName</label>&nbsp;
+                            <span class="text-danger"></span>
+                            <input placeholder="placeholder" type="text" class="form-control" value="Ekrem">
+
+                        </div>
+                        <div>
+                            <label class="form-label" for="">Email</label>&nbsp;
+                            <span class="text-danger"></span>
+                            <input placeholder="placeholder" type="text" class="form-control"
+                                value="ekremgunes@test.com">
+
+                        </div>
+                        <div>
+                            <label class="form-label" for="">Facebook &nbsp; <i
+                                    class="fa-brands fa-facebook"></i></label>&nbsp;
+                            <span class="text-danger"></span>
+                            <input placeholder="placeholder" type="text" class="form-control" value="">
+
+                        </div>
+                        <div>
+                            <label class="form-label" for="">Instagram &nbsp;<i
+                                    class="fa-brands fa-instagram"></i></label>&nbsp;
+                            <span class="text-danger"></span>
+                            <input placeholder="placeholder" type="text" class="form-control"
+                                value="https://instagram/sdafsadf">
+
+                        </div>
+                        <div>
+                            <label class="form-label" for="">Linkedin &nbsp;<i
+                                    class="fa-brands fa-linkedin"></i></label>&nbsp;
+                            <span class="text-danger"></span>
+                            <input placeholder="placeholder" type="text" class="form-control"
+                                value="https://linkedin.com/in/ekremgunes">
+
+                        </div>
+                        <div>
+                            <label class="form-label" for="">Github &nbsp; <i
+                                    class="fa-brands fa-github"></i></label>&nbsp;
+                            <span class="text-danger"></span>
+                            <input placeholder="placeholder" type="text" class="form-control"
+                                value="https://blablaApp/ekremgunes">
+
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn-submit" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+        <section id="right-forum-section" class="col-12 col-lg-3">
+
+            <!-- <div class="user-info">
+                <a href="/user.html"><img src="assets/images/ekrem gunes-logos.jpeg" alt=""></a>
+                <h4>Ekrem</h4>
+                <h6>Developer</h6>
+                <h6>343 Followers</h6>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum aliquam quidem facilis odio
+                    illum </p>
+                <p>You posted <b style="margin: 0 0.15rem;">8</b> time</p>
+                <p>You're liked <b style="margin: 0 0.15rem;">12.310</b> time</p>
+            </div> -->
+
+            <div id="footer">
+                <div id="footer-social-links">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/ekremgunes/"><i
+                                    class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><a href="#"><i class="fa-brands fa-github"></i>Github</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="text-center small footer-links mb-2 col-12"> &#x2022; <a href="">About</a> &#x2022;<a
+                    href="privacy">Privacy-Policy</a> &#x2022; Copyright <i><a style="color: #c79005;margin: .2rem;"
+                        href="http://gunesekrem.com">gunesekremcom</a></i>
+                <script>var date = new Date(); document.write(date.getFullYear()); </script> &copy;
+            </div>
+        </section>
+    </main>
+    <!-- back to top -->
+    <a onclick="javascript:void(0);" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
+        integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/libs/toastr/toastr.min.js"></script>
+    <script src="assets/js/hamburgermenu.js"></script>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > (document.body.scrollHeight * 0.15) ||
+                document.documentElement.scrollTop > (document.documentElement.scrollHeight * 0.15)) {
+                document.querySelector('.back-to-top').style.display = "block";
+            } else {
+                document.querySelector('.back-to-top').style.display = "none";
+            }
+        }
+
+        document.querySelector('.back-to-top').addEventListener('click', function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+
+    <script>
+        const imageUpload = document.querySelector('.image-upload')
+        const previewImage = imageUpload.querySelector('.preview-image')
+        const imageInput = imageUpload.querySelector('.image-input')
+        var imgSrc = previewImage.getAttribute("src")
+
+        function showPreviewImage() {
+            const file = imageInput.files[0]
+            const reader = new FileReader()
+            reader.onload = function (event) {
+                previewImage.src = event.target.result
+                // imageInput.value = event.target.result <-<<<<<need test 
+                imageUpload.classList.add('has-image')
+            }
+
+            reader.readAsDataURL(file)
+        }
+
+        function cancelImageUpload() {
+            previewImage.src = imgSrc
+            imageUpload.classList.remove('has-image')
+        }
+
+        previewImage.addEventListener('click', function () {
+            imageInput.click()
+        });
+
+        imageInput.addEventListener('change', showPreviewImage)
+
+
+
+
+    </script>
+</body>
+
+</html>

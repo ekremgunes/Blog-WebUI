@@ -69,11 +69,13 @@ const changeTheme = (theme) => {
             e.classList.add("hover-dark")
 
         })
-        if (userInfo!= null) {
-           userInfo.classList.add(dark) 
+        if (userInfo != null) {
+            userInfo.classList.add(dark)
         }
-        
-        footerDiv.classList.add(dark)
+        if (footerDiv != null) {
+            footerDiv.classList.add(dark)
+
+        }
         if (posts.length > 0) {
             posts.forEach(e => {
                 e.classList.add(dark)
@@ -99,11 +101,11 @@ const changeTheme = (theme) => {
             leftSidebar.classList.add(dark)
 
         }
-        if (filterDiv!= null) {
+        if (filterDiv != null) {
             filterDiv.classList.add(dark)
-            filterDiv.querySelectorAll("div:nth-child(1) button").forEach(e=>{
+            filterDiv.querySelectorAll("div:nth-child(1) button").forEach(e => {
                 e.classList.add(dark)
-            }) 
+            })
         }
 
         if (comments.length > 0) {
@@ -155,10 +157,13 @@ const changeTheme = (theme) => {
 
         })
         if (userInfo != null) {
-        userInfo.classList.remove(dark)
-            
+            userInfo.classList.remove(dark)
+
         }
-        footerDiv.classList.remove(dark)
+        if (footerDiv != null) {
+            footerDiv.classList.remove(dark)
+
+        }
 
 
         if (leftSidebar != null) {
@@ -186,11 +191,11 @@ const changeTheme = (theme) => {
         if (editorArea != null) {
             editorArea.classList.remove(dark)
         }
-        if (filterDiv!= null) {
+        if (filterDiv != null) {
             filterDiv.classList.remove(dark)
-            filterDiv.querySelectorAll("div:nth-child(1) button").forEach(e=>{
+            filterDiv.querySelectorAll("div:nth-child(1) button").forEach(e => {
                 e.classList.remove(dark)
-            }) 
+            })
 
         }
         if (comments.length > 0) {

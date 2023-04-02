@@ -1,38 +1,47 @@
 @media screen and (min-width:1400px) {
-    #footer #footer-recommended ul li h6{
+    #footer #footer-recommended ul li h6 {
         font-size: 13pt;
     }
 }
+
 @media screen and (min-width:1300px) {
-    #footer #footer-recommended ul li h6{
+    #footer #footer-recommended ul li h6 {
         font-size: 12pt;
     }
 }
+
 @media screen and (min-width:1200px) {
-    #footer #footer-recommended ul li h6{
+    #footer #footer-recommended ul li h6 {
         font-size: 10pt;
     }
 }
+
 @media screen and (max-width:1200px) {
     #right-forum-section {
         width: 92%;
+        margin-top: .5rem;
     }
-    #footer #footer-recommended ul li h6{
+
+    #footer #footer-recommended ul li h6 {
         font-size: 11pt;
     }
-    .btn-recomended-follow{
+
+    .btn-recomended-follow {
         margin-left: 2.5rem;
     }
-    #footer{
+
+    #footer {
         display: flex;
         align-content: center;
         justify-content: space-evenly;
     }
+
     #footer-recommended h6 {
         font-size: 12pt;
         display: inline;
         margin-left: .6rem;
     }
+
     #middle-forum-section {
         width: 74%;
         margin-left: 1rem;
@@ -48,7 +57,7 @@
         margin-left: .7rem;
     }
 
-   
+
 }
 
 @media screen and (max-width:1024px) {
@@ -76,9 +85,11 @@
     #right-forum-section {
         width: 100%;
     }
-    #footer #footer-recommended ul li h6{
+
+    #footer #footer-recommended ul li h6 {
         font-size: 12pt;
     }
+
     #middle-forum-section {
         width: 100%;
         margin-left: .1rem;
@@ -128,23 +139,38 @@
     #nav-links {
         display: none;
     }
-    
+
+    .preview-image {
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+
+    .image-upload {
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+
 
 }
 
 /* small screen */
 @media screen and (max-width: 540px) {
     .left-div ul {
-        padding-left: 10.8rem;
+        padding-left: 11rem;
     }
-    #footer{
+
+    #footer {
         display: block;
     }
-    #footer #footer-recommended ul li h6{
+
+    #footer #footer-recommended ul li h6 {
         font-size: 10pt;
     }
+
     #footer-recommended {
-        padding: 0.4rem 2rem;}
+        padding: 0.4rem 2rem;
+    }
+
     .post {
         min-width: 15rem;
     }
@@ -160,13 +186,13 @@
 
 @media screen and (max-width: 380px) {
     .left-div ul {
-        padding-left: 13rem;
+        padding-left: 16rem;
     }
-    
+
 }
 
 @media screen and (max-width: 350px) {
     .left-div ul {
-        padding-left: 16rem;
+        padding-left: 19rem;
     }
 }

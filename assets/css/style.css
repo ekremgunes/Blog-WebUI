@@ -15,6 +15,7 @@ body {
     border-bottom: 1px solid var(--border_color);
     padding: .5rem;
     padding-bottom: .2rem;
+    
 }
 
 #nav-search {
@@ -577,7 +578,22 @@ a {
     text-decoration: wavy;
     color: var(--dark_primary);
 }
-
+.btn-submit{
+    border-radius: .5rem;
+    padding: .4rem 1.5rem .4rem 1.5rem;
+    outline: none;
+    border: none;
+    background-color: var(--light_blue);
+    transition: .33s;
+    font-weight: bold;
+    text-decoration: wavy;
+    color: var(--dark_primary);
+}
+.btn-submit:hover{
+    border-radius: 0;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .btn-follow:hover {
     border-radius: 0;
     color: white;
