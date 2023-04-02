@@ -1,11 +1,11 @@
 $(document).ready(function() {
     $(document).delegate('.open', 'click', function(event){
-        $(this).addClass('oppenned');
+        $(this).addClass('oppenned')
         document.getElementById("hamburgerDiv").style.position ="fixed"
-        event.stopPropagation();
+        event.stopPropagation()
     })
     $(document).delegate('body', 'click', function(event) {
-        $('.open').removeClass('oppenned');
+        $('.open').removeClass('oppenned')
         document.getElementById("hamburgerDiv").style.position ="sticky"
 
     })
@@ -13,6 +13,6 @@ $(document).ready(function() {
         $('.open').removeClass('oppenned');
         document.getElementById("hamburgerDiv").style.position ="sticky"
 
-        event.stopPropagation();
-    });
-});
+        event.stopPropagation()
+    })
+})

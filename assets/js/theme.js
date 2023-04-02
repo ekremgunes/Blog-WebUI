@@ -1,15 +1,17 @@
 const ThemeSwitch = document.querySelector('#switch-input')
 const MobileSwitch = document.querySelector("#mobileDarkSwitch")
-const body = document.body;
-const posts = document.querySelectorAll(".post")
-const editorArea = document.querySelector(".editorArea")
+const body = document.body
 
-const userInfo = document.querySelector(".user-info")
+const posts = document.querySelectorAll(".post")
 const footerDiv = document.querySelector("#footer")
 const socialLinks = document.querySelectorAll("#footer #footer-social-links ul li a")
-
+const footerLinks = document.querySelectorAll(".footer-links a")
 const leftSidebar = document.querySelector(".left-div")
 const leftSidebarLinks = document.querySelectorAll(".left-div ul li")
+const hamburgerDivSpans = document.querySelectorAll("#hamburgerDiv span")
+const editorArea = document.querySelector(".editorArea")
+const userInfo = document.querySelector(".user-info")
+const settingsArea = document.querySelector(".settings-area")
 const filterDiv = document.querySelector(".filters")
 
 //theme classes
@@ -17,9 +19,6 @@ const dark = "item-dark";
 const darkText = "item-dark-text";
 
 
-
-
-//                     REPLY ACTİVE İNDEXTE NULL GELDĞİ İÇİN UYGULAMA ÇÖKÜYOR ÇALIŞMIYOR
 
 
 //localStorage.clear();
@@ -69,12 +68,19 @@ const changeTheme = (theme) => {
             e.classList.add("hover-dark")
 
         })
+        footerLinks.forEach(e => {
+            e.classList.add(darkText)
+
+        })
         if (userInfo != null) {
             userInfo.classList.add(dark)
         }
         if (footerDiv != null) {
             footerDiv.classList.add(dark)
 
+        }
+        if (settingsArea != null) {
+            settingsArea.classList.add(dark)
         }
         if (posts.length > 0) {
             posts.forEach(e => {
@@ -93,7 +99,11 @@ const changeTheme = (theme) => {
         if (editorArea != null) {
             editorArea.classList.add(dark)
         }
-
+        if (hamburgerDivSpans.length > 0) {
+            hamburgerDivSpans.forEach(e=>{
+                e.style.backgroundColor = "white"
+            })
+        }
         if (leftSidebar != null) {
             leftSidebarLinks.forEach(element => {
                 element.classList.add(darkText)
@@ -156,6 +166,10 @@ const changeTheme = (theme) => {
             e.classList.remove("hover-dark")
 
         })
+        footerLinks.forEach(e => {
+            e.classList.remove(darkText)
+
+        })
         if (userInfo != null) {
             userInfo.classList.remove(dark)
 
@@ -164,7 +178,9 @@ const changeTheme = (theme) => {
             footerDiv.classList.remove(dark)
 
         }
-
+        if (settingsArea != null) {
+            settingsArea.classList.remove(dark)
+        }
 
         if (leftSidebar != null) {
             leftSidebar.classList.remove(dark)
@@ -197,6 +213,11 @@ const changeTheme = (theme) => {
                 e.classList.remove(dark)
             })
 
+        }
+        if (hamburgerDivSpans.length > 0) {
+            hamburgerDivSpans.forEach(e=>{
+                e.style.backgroundColor = "black"
+            })
         }
         if (comments.length > 0) {
             comments.forEach(element => {

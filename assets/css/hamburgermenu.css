@@ -52,7 +52,7 @@
     right: 0;
     top: 0;
     position: absolute;
-    background-color: var(--golden);
+    background-color: var(--golden) !important;
     border-radius: 50%;
     z-index: 18;
     overflow: hidden;
@@ -102,7 +102,6 @@
     float: left;
     line-height: 40px;
     transition: .5s;
-    border-right: 1px solid var(--golden);
     padding-right: .5rem;
 }
 
@@ -115,6 +114,7 @@
     height: 400px;
     width: 400px;
 }
+
 
 .oppenned span:nth-child(2) {
     overflow: visible;

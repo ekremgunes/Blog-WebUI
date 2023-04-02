@@ -3,7 +3,7 @@
 
 <head>
     <!-- basic page need -->
-    <title>Single Post</title>
+    <title>Create Content</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/single.css">
     <!-- libs -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
@@ -25,11 +24,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/write.css">
     <link rel="stylesheet" href="assets/libs/toastr/toastr.min.css">
 
-    <link rel="stylesheet" href="assets/css/hamburgermenu.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
 
+    <link rel="stylesheet" href="assets/css/hamburgermenu.css">
 </head>
+
 
 <body class="light">
     <header class="mx-lg-4 mx-3">
@@ -39,7 +41,7 @@
                 <a href="/index.html">
                     <img src="assets/images/ekrem gunes-logos.jpeg" width="45rem" style="border-radius: 50%;"
                         alt="LOGO">
-                    
+
                 </a>
             </div>
 
@@ -49,10 +51,11 @@
                         <li><i class="fa-sharp fa-solid fa-feather"></i>Write</li>
                     </a>
                     <a href="#">
-                        <li><i class="fa-regular fa-bell"></i>Notify</li>
+                        <li><i class="fa-regular fa-bell"></i></li>
                     </a>
                     <a href="#">
-                        <li><i class="fa-regular fa-user"></i>User</li>
+                        <!-- needs modal or another thing-->
+                        <li><i class="fa-solid fa-gear"></i></li>
                     </a>
 
                     <li class="switch-parent">
@@ -71,10 +74,11 @@
                             <a href="write.html" title="about">Write</a>
                         </li>
                         <li>
-                            <a href="user.html" title="skills">User</a>
+                            <a href="userSettings.html" title="skills">Settings</a>
                         </li>
                         <li>
-                            <a href="login.html" title="jobs">Login</a>
+                            <!-- modal or another solution needs here -->
+                            <a href="notifcati.html" title="jobs">Notification</a>
                         </li>
                         <li class="switch-parent">
                             <a href="javascript:void(0)" id="mobileDarkSwitch">Dark Mode</a>
@@ -90,226 +94,248 @@
 
 
         <section id="middle-forum-section" class="col-lg-9 col-12 ">
-            <div class="post-area">
-                <div class="post row">
-                    <div class="col-12 col-md-8 col-lg-8">
-                        <div class="post-info">
-                            <a class="userName" href="/user.html">
-                                <img src="assets/images/user_woman.jpg" class="post-sender-img">
+            <div class="post-area ">
+                <div class="post-area">
+                    <div class="post row">
+                        <div class="col-12 col-md-8 col-lg-8">
+                            <div class="post-info">
+                                <a class="userName" href="/user.html">
+                                    <img src="assets/images/user_woman.jpg" class="post-sender-img">
 
-                                Natalia </a><small class="post-date">03/01/2020</small>
-                        </div>
+                                    Natalia </a><small class="post-date">03/01/2020</small>
+                            </div>
 
-                        <div class="post-content">
-                            <a href="/single.html">
-                                <h2 class="post-head">Istanbul is perfect city</h2>
-                                <p class="post-inner">
-                                    Istanbul ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
-                                    aliasssss natus autem dictaalias natus autem dicta
-                                    totam illo.You must be see there..</p>
-                            </a>
-                            <div class="post-footer">
-                                <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">travel</span>
-                                    <span class="tag">Istanbul</span>
-                                    <i class="fa-solid fa-comment-dots icon-comment"> </i><span>30</span>
-                                    <i class="fa-solid fa-heart icon-heart"> </i><span>9123</span>
+                            <div class="post-content">
+                                <a href="/single.html">
+                                    <h2 class="post-head">Istanbul is perfect city</h2>
+                                    <p class="post-inner">
+                                        Istanbul ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
+                                        aliasssss natus autem dictaalias natus autem dicta
+                                        totam illo.You must be see there..</p>
+                                </a>
+                                <div class="post-footer">
+                                    <div>
+                                        <a href="" class="tag">life</a>
+                                        <a href="" class="tag">travel</a>
+                                        <a href="" class="tag">Istanbul</a>
+                                        <i class="fa-solid fa-comment-dots icon-comment"> </i><span>30</span>
+                                        <i class="fa-solid fa-heart icon-heart"> </i><span>9123</span>
+                                    </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 post-img-div">
+                            <a href="#post"><img class="post-img" src="/assets/images/post-ıstanbul.jpg"></a>
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-4 col-lg-4 post-img-div">
-                        <a href="#post"><img class="post-img" src="/assets/images/post-ıstanbul.jpg"></a>
-                    </div>
 
-                </div>
+                    <!-- EXAMPLES start-->
+                    <div class="post row">
+                        <div class="col-12 col-md-8 col-lg-8">
+                            <div class="post-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_woman.jpg" class="post-sender-img">
 
+                                    Natalia </a><small class="post-date">03/01/2023</small>
+                            </div>
 
-                <!-- EXAMPLES start-->
-                <div class="post row">
-                    <div class="col-12 col-md-8 col-lg-8">
-                        <div class="post-info">
-                            <a class="userName" href="#userprofile">
-                                <img src="assets/images/user_woman.jpg" class="post-sender-img">
+                            <div class="post-content">
+                                <a href="#post">
+                                    <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
+                                    <p class="post-inner">
+                                        Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
+                                        aliasssss natus autem dictaalias natus autem dicta
+                                        totam illo
+                                        totam illo...</p>
+                                </a>
+                                <div class="post-footer">
+                                    <div>
+                                        <a href="" class="tag">life</a>
+                                        <a href="" class="tag">tag</a>
 
-                                Natalia </a><small class="post-date">03/01/2023</small>
-                        </div>
-
-                        <div class="post-content">
-                            <a href="#post">
-                                <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
-                                <p class="post-inner">
-                                    Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
-                                    aliasssss natus autem dictaalias natus autem dicta
-                                    totam illo
-                                    totam illo...</p>
-                            </a>
-                            <div class="post-footer">
-                                <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
-
-                                    <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
-                                    <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                        <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
+                                        <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                    </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 post-img-div">
+                            <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-4 col-lg-4 post-img-div">
-                        <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
-                    </div>
+                    <div class="post row">
+                        <div class="col-12 col-md-8 col-lg-8">
+                            <div class="post-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_woman.jpg" class="post-sender-img">
 
-                </div>
-                <div class="post row">
-                    <div class="col-12 col-md-8 col-lg-8">
-                        <div class="post-info">
-                            <a class="userName" href="#userprofile">
-                                <img src="assets/images/user_woman.jpg" class="post-sender-img">
+                                    Natalia </a><small class="post-date">03/01/2023</small>
+                            </div>
 
-                                Natalia </a><small class="post-date">03/01/2023</small>
-                        </div>
+                            <div class="post-content">
+                                <a href="#post">
+                                    <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
+                                    <p class="post-inner">
+                                        Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
+                                        aliasssss natus autem dictaalias natus autem dicta
+                                        totam illo
+                                        totam illo...</p>
+                                </a>
+                                <div class="post-footer">
+                                    <div>
+                                        <a href="" class="tag">life</a>
+                                        <a href="" class="tag">tag</a>
 
-                        <div class="post-content">
-                            <a href="#post">
-                                <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
-                                <p class="post-inner">
-                                    Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
-                                    aliasssss natus autem dictaalias natus autem dicta
-                                    totam illo
-                                    totam illo...</p>
-                            </a>
-                            <div class="post-footer">
-                                <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
-
-                                    <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
-                                    <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                        <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
+                                        <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                    </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 post-img-div">
+                            <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-4 col-lg-4 post-img-div">
-                        <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
-                    </div>
+                    <div class="post row">
+                        <div class="col-12 col-md-8 col-lg-8">
+                            <div class="post-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_woman.jpg" class="post-sender-img">
 
-                </div>
-                <div class="post row">
-                    <div class="col-12 col-md-8 col-lg-8">
-                        <div class="post-info">
-                            <a class="userName" href="#userprofile">
-                                <img src="assets/images/user_woman.jpg" class="post-sender-img">
+                                    Natalia </a><small class="post-date">03/01/2023</small>
+                            </div>
 
-                                Natalia </a><small class="post-date">03/01/2023</small>
-                        </div>
+                            <div class="post-content">
+                                <a href="#post">
+                                    <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
+                                    <p class="post-inner">
+                                        Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
+                                        aliasssss natus autem dictaalias natus autem dicta
+                                        totam illo
+                                        totam illo...</p>
+                                </a>
+                                <div class="post-footer">
+                                    <div>
+                                        <a href="" class="tag">life</a>
+                                        <a href="" class="tag">tag</a>
 
-                        <div class="post-content">
-                            <a href="#post">
-                                <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
-                                <p class="post-inner">
-                                    Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
-                                    aliasssss natus autem dictaalias natus autem dicta
-                                    totam illo
-                                    totam illo...</p>
-                            </a>
-                            <div class="post-footer">
-                                <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
-
-                                    <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
-                                    <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                        <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
+                                        <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                    </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 post-img-div">
+                            <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-4 col-lg-4 post-img-div">
-                        <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
-                    </div>
+                    <div class="post row">
+                        <div class="col-12 col-md-8 col-lg-8">
+                            <div class="post-info">
+                                <a class="userName" href="#userprofile">
+                                    <img src="assets/images/user_woman.jpg" class="post-sender-img">
 
-                </div>
-                <div class="post row">
-                    <div class="col-12 col-md-8 col-lg-8">
-                        <div class="post-info">
-                            <a class="userName" href="#userprofile">
-                                <img src="assets/images/user_woman.jpg" class="post-sender-img">
+                                    Natalia </a><small class="post-date">03/01/2023</small>
+                            </div>
 
-                                Natalia </a><small class="post-date">03/01/2023</small>
-                        </div>
+                            <div class="post-content">
+                                <a href="#post">
+                                    <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
+                                    <p class="post-inner">
+                                        Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
+                                        aliasssss natus autem dictaalias natus autem dicta
+                                        totam illo
+                                        totam illo...</p>
+                                </a>
+                                <div class="post-footer">
+                                    <div>
+                                        <a href="" class="tag">life</a>
+                                        <a href="" class="tag">tag</a>
 
-                        <div class="post-content">
-                            <a href="#post">
-                                <h2 class="post-head">İnsan ne ile yaşar kitabı iyimi ?</h2>
-                                <p class="post-inner">
-                                    Lorem ipsum dolor Voluptate facere placeat,Voluptate facere placeat,
-                                    aliasssss natus autem dictaalias natus autem dicta
-                                    totam illo
-                                    totam illo...</p>
-                            </a>
-                            <div class="post-footer">
-                                <div>
-                                    <span class="tag">life</span>
-                                    <span class="tag">tag</span>
-
-                                    <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
-                                    <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                        <i class="fa-solid fa-comment-dots icon-comment"> </i><span>6</span>
+                                        <i class="fa-solid fa-heart icon-heart"> </i><span>98</span>
+                                    </div>
                                 </div>
                             </div>
+
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 post-img-div">
+                            <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-4 col-lg-4 post-img-div">
-                        <a href="#post"><img class="post-img" src="/assets/images/ekrem gunes-logos.jpeg"></a>
-                    </div>
+
+                    <!-- EXAMPLES end-->
 
                 </div>
+                <div class="text-center">
+                    <button onclick="LoadMore(this)" class="btn-load-more">Load More</button>
+                    <i class="fa-solid fa-hourglass fa-bounce fa-2xl"></i>
+                </div>
 
-                <!-- EXAMPLES end-->
 
             </div>
-            <p class="text-center">...</p>
 
         </section>
-        <section id="right-forum-section" class="col-lg-3 col-12">
+        <section id="right-forum-section" class="col-12 col-lg-3">
 
             <div class="user-info">
                 <a href="/user.html"><img src="assets/images/user_woman.jpg" alt=""></a>
                 <h4>Natalia</h4>
                 <h6>Yazar / Japonya</h6>
-                <h6>343 Takipçi</h6>
+                <h6><span id="follower-count">343</span> Follower</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus earum aliquam quidem facilis odio
                     illum ratione voluptatum ..</p>
-                <button class="btn-follow" type="button">Follow</button>
+                <!-- if client folloed before add followed class -->
+                <button onclick="follow(this,1)" class="btn-follow follow" type="button">Follow</button>
             </div>
 
             <div id="footer">
                 <div id="footer-social-links">
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i>Linkedin</a></li>
+                        <li><a href="https://www.linkedin.com/in/ekremgunes/"><i
+                                    class="fa-brands fa-linkedin"></i>Linkedin</a></li>
                         <li><a href="#"><i class="fa-brands fa-github"></i>Github</a></li>
                         <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
                     </ul>
                 </div>
-                <div class="text-center">Copyright Forum <script>var date = new Date();document.write(date.getFullYear()); </script> &copy;</div>
 
             </div>
+
         </section>
     </main>
-
+    <div class="text-center small footer-links mb-2 col-12"> &#x2022; <a href="">About</a> &#x2022;<a
+            href="privacy">Privacy-Policy</a> &#x2022; Copyright <i><a style="color: #c79005;margin: .2rem;"
+                href="http://gunesekrem.com">gunesekremcom</a></i>
+        <script>var date = new Date(); document.write(date.getFullYear()); </script> &copy;
+    </div>
     <!-- back to top -->
     <a onclick="javascript:void(0);" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- loading -->
+    <div class="wrapper">
+        <div class="loader" id="loader">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+        </div>
+    </div>
+
+    <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
         integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/libs/toastr/toastr.min.js"></script>
-    <script src="assets/js/app.js"></script>
     <script src="assets/js/hamburgermenu.js"></script>
+    <script src="assets/js/app.js"></script>
     <script src="assets/js/theme.js"></script>
 
 </body>

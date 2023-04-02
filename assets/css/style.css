@@ -23,7 +23,7 @@ body {
     bottom: 20px;
     right: 20px;
     font-size: 16px;
-    background-color: var(--golden_alfa);
+    background-color: var(--light_blue);
     color: white;
     padding: 10px 15px;
     border-radius: 50%;
@@ -32,7 +32,7 @@ body {
 
 .back-to-top:hover {
     color: white;
-    background-color: #333;
+    background-color: var(--golden_alfa);
 }
 #nav-search {
     display: flex;
@@ -623,5 +623,73 @@ div i.fa-hourglass{
     margin-top: 1.1rem;
 }
 .followed{
-    background-color: #ffb803;
+    background-color: var(--golden);
+}
+.wrapper {
+    background-color: rgba(49, 49, 49, 0.25);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: block;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    animation: rotation 1.5s infinite linear;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--golden);
+    animation: dot 1s ease-in-out infinite;
+    position: absolute;
+}
+
+.dot1 {
+    animation-delay: 0s;
+    top: 0;
+    left: 25px;
+}
+
+.dot2 {
+    animation-delay: 0.1s;
+    top: 25px;
+    right: 0;
+}
+
+.dot3 {
+    animation-delay: 0.25s;
+    bottom: 0;
+    left: 25px;
+}
+
+@keyframes dot {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }

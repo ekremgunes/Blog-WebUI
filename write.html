@@ -43,7 +43,7 @@
                 <a href="/index.html">
                     <img src="assets/images/ekrem gunes-logos.jpeg" width="45rem" style="border-radius: 50%;"
                         alt="LOGO">
-                    
+
                 </a>
             </div>
 
@@ -172,6 +172,16 @@
     </main>
     <!-- back to top -->
     <a onclick="javascript:void(0);" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+    <!-- loading -->
+    <div class="wrapper">
+        <div class="loader" id="loader">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+        </div>
+    </div>
+
+    <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"
         integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -277,7 +287,7 @@
             });
             var category = $("#form-category").val()
             var title = $("#form-title").val()
-            
+
             if (title.length < 10) {
                 toastr.warning("Title is too short")
                 $("#form-title").focus()
@@ -304,18 +314,7 @@
                     tags: tags
                 }
                 console.log(JSON.stringify(data))
-                // $.ajax({
-                //     url: "YOUR URL",
-                //     method: "POST",
-                //     data: JSON.stringify(data),
-                //     contentType: "application/json"
-                // })
-                //     .done(function (response) {
-                //         console.log(response);
-                //     })
-                //     .fail(function (response) {
-                //         console.log(response);
-                //     })
+                // akax - fetch
 
             } else {
                 toastr.warning("Post can't be empty")
