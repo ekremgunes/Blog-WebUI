@@ -1,11 +1,11 @@
 window.onscroll = function () { scrollFunction() }
 
-window.onload = function () {
+window.onload = function () { loadAnimate() }
+function loadAnimate() {
     var loader = document.getElementById("loader")
     var wrapper = document.querySelector(".wrapper")
     loader.style.display = "none"
-    wrapper.style.display = "none"
-
+    wrapper.style.display = "none"    
 }
 function filterCountry(countryId) {
     //code
