@@ -6,6 +6,8 @@ body {
     scroll-behavior: smooth;
 }
 
+
+/* Navbar start */
 .nav-area {
     font-family: 'Dosis', sans-serif;
     display: flex;
@@ -15,25 +17,52 @@ body {
     border-bottom: 1px solid var(--border_color);
     padding: .5rem;
     padding-bottom: .2rem;
-    
+
 }
-.back-to-top {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 16px;
-    background-color: var(--light_blue);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50%;
+
+#nav-links ul {
+    margin-top: .33rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: large;
+}
+
+#nav-links ul li {
+    padding: .2rem 1rem .2rem 1rem;
+    margin-right: 1.5rem;
+    background-color: var(--golden);
+    border-radius: 1rem;
+}
+
+#nav-links ul li i {
+    margin-right: .5rem;
+    background-color: var(--golden);
+
+}
+
+#nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-area #search-icon {
+    color: black;
     transition: .4s;
 }
 
-.back-to-top:hover {
-    color: white;
-    background-color: var(--golden_alfa);
+.nav-area #search-icon:hover {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.658);
 }
+
+#nav-logo a h3 {
+    color: black;
+}
+
+/* Navbar end */
+
+
 #nav-search {
     display: flex;
     align-items: center;
@@ -85,51 +114,7 @@ body {
     color: black;
 }
 
-#nav-links ul {
-    margin-top: .33rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    font-size: large;
-}
-
-#nav-links ul li {
-    padding: .2rem 1rem .2rem 1rem;
-    margin-right: 1.5rem;
-    background-color: var(--golden);
-    border-radius: 1rem;
-}
-
-#nav-links ul li i {
-    margin-right: .5rem;
-    background-color: var(--golden);
-
-}
-
-#nav-links a {
-    color: black;
-    text-decoration: none;
-}
-
-.nav-area #search-icon {
-    color: black;
-    transition: .4s;
-}
-
-.nav-area #search-icon:hover {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.658);
-}
-
-a {
-    text-decoration: none !important;
-}
-
-#nav-logo a h3 {
-    color: black;
-}
-
-/* filters */
+/* Filters start*/
 .filters {
     background-color: white;
     padding: 1rem;
@@ -226,7 +211,9 @@ a {
     font-size: larger;
 }
 
-/* post */
+/* Filters end */
+
+/* Post start */
 
 .post-footer i {
     color: gray;
@@ -317,6 +304,14 @@ a {
     color: #01181f;
 }
 
+/* Post end */
+
+/* Comment start */
+.icon-comment {
+    margin-left: 1.1rem;
+}
+
+/* Comment end */
 .tag {
     margin: .15rem;
     border-radius: .6rem;
@@ -344,13 +339,9 @@ a {
     cursor: pointer;
 }
 
-.icon-comment {
-    margin-left: 1.1rem;
-}
 
-/* ***** 
-         LEFT  BAR CSS  START
-****** */
+
+/* Left section start */
 #left-forum-section {
     max-width: 15rem;
     margin-top: 1.6rem;
@@ -396,14 +387,12 @@ a {
 
 }
 
-/* ***** 
-         LEFT  BAR CSS END 
-****** */
+/* Left section end */
 
 
-/* ***** 
-         RİGHT  BAR CSS  START
-****** */
+
+/* Right section start */
+
 
 #right-forum-section {
     margin-top: 1.6rem;
@@ -434,15 +423,15 @@ a {
 .footer-links a:hover {
     color: black;
     border-bottom: 1px solid black;
-    cursor:help ;
+    cursor: help;
 }
-.btn-recomended-follow{
+
+.btn-recomended-follow {
     float: right;
 }
 
 #footer-social-links {
     padding: .3rem;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.178); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -518,7 +507,8 @@ a {
     list-style: none;
     padding-left: 1px;
 }
-#footer-recommended ul li{
+
+#footer-recommended ul li {
     margin-bottom: .4rem;
     text-align: justify;
 }
@@ -529,7 +519,8 @@ a {
     margin-left: 1px;
     color: gray !important;
 }
-#footer-recommended h5{
+
+#footer-recommended h5 {
     border-bottom: 1px solid var(--border_color);
     margin: .5rem;
     margin-bottom: 1rem;
@@ -542,21 +533,26 @@ a {
     list-style: none;
     margin-bottom: 5px;
 }
+
+/* Right section end */
+/* buttons */
 .btn-recomended-follow {
     border-radius: 50%;
     padding: 3px 1px 3px .6rem;
     outline: none;
     border: none;
     background-color: var(--light_blue);
-    transition: .35s ;
+    transition: .35s;
     font-weight: bold;
     text-decoration: wavy;
     color: var(--dark_primary);
     margin-left: .2rem;
 }
-.btn-recomended-follow ul{
+
+.btn-recomended-follow ul {
     padding: 2px;
 }
+
 .btn-recomended-follow i {
     font-size: smaller !important;
     color: black;
@@ -567,7 +563,8 @@ a {
     color: white !important;
     box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
 }
-.btn-load-more{
+
+.btn-load-more {
     border-radius: .5rem;
     padding: .4rem 1.5rem .4rem 1.5rem;
     outline: none;
@@ -578,11 +575,13 @@ a {
     text-decoration: wavy;
     color: var(--dark_primary);
 }
-.btn-load-more:hover{
+
+.btn-load-more:hover {
     border-radius: 0;
     color: white;
     box-shadow: rgba(100, 100, 111, 0.25) 0px 7px 29px 0px;
 }
+
 .btn-follow {
     border-radius: .5rem;
     padding: .4rem 1.5rem .4rem 1.5rem;
@@ -594,7 +593,8 @@ a {
     text-decoration: wavy;
     color: var(--dark_primary);
 }
-.btn-submit{
+
+.btn-submit {
     border-radius: .5rem;
     padding: .4rem 1.5rem .4rem 1.5rem;
     outline: none;
@@ -605,11 +605,13 @@ a {
     text-decoration: wavy;
     color: var(--dark_primary);
 }
-.btn-submit:hover{
+
+.btn-submit:hover {
     border-radius: 0;
     color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .btn-follow:hover {
     border-radius: 0;
     color: white;
@@ -617,14 +619,39 @@ a {
 
 }
 
-div i.fa-hourglass{
-    display: none ;
+div i.fa-hourglass {
+    display: none;
     margin-bottom: 1rem;
     margin-top: 1.1rem;
 }
-.followed{
+
+.followed {
     background-color: var(--golden);
 }
+
+/* All pages - */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    background-color: var(--light_blue);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.back-to-top:hover {
+    color: white;
+    background-color: var(--golden_alfa);
+}
+
+a {
+    text-decoration: none !important;
+}
+
 .wrapper {
     background-color: rgba(49, 49, 49, 0.25);
     height: 100vh;
@@ -677,9 +704,11 @@ div i.fa-hourglass{
     0% {
         transform: scale(0);
     }
+
     50% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(0);
     }
@@ -689,7 +718,10 @@ div i.fa-hourglass{
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(359deg);
     }
 }
+
+/* All pages + */

@@ -50,12 +50,7 @@ span{
     color: #c62b08ef;
     display: block !important;
 }
-@media screen and (max-width:540px) {
-    .form_login_signup div input {
 
-        width: 15rem;
-    }
-}
 
 .form_login_signup {
     background-color: white;
@@ -113,3 +108,10 @@ span{
     position: relative;
     margin: .2rem 0 1.8rem 0;
   }
+  /* responsive */
+@media screen and (max-width:540px) {
+    .form_login_signup div input {
+
+        width: 15rem;
+    }
+}

@@ -1,5 +1,6 @@
 @import url(cssLayout.css);
 
+/* Post start */
 .post {
     padding: 2rem;
     margin-left: .5rem;
@@ -10,7 +11,16 @@
     font-size: 3rem;
     font-weight: bolder;
 }
+.post-footer {
+    border-top: 1px solid var(--border_color);
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
 
+
+/* Post end */
+
+/* Comment start */
 .comment {
     margin-top: 1rem;
     background-color: white;
@@ -83,72 +93,54 @@
     margin-right: .2rem;
 
 }
-
-.post-footer {
-    border-top: 1px solid var(--border_color);
-    padding-top: 1rem;
-    padding-bottom: 0;
-}
-
-.icon-heart {
-    margin-left: 1rem;
-    margin-right: .4rem;
-    color: rgba(238, 10, 10, 0.5) !important;
-    transition: .4s;
-}
-
-@keyframes heartAnimation {
-    0% {
-        transform: scale(1);
-    }
-
-    75% {
-        transform: scale(1.45);
-    }
-
-    100% {
-        transform: scale(1.15);
-    }
-}
-
-@keyframes heartRemoveAnimation {
-    0% {
-        transform: scale(1.2);
-    }
-
-    75% {
-        transform: scale(0.85);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-.animate-heart {
-    animation-name: heartAnimation;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-duration: .6s;
-    animation-delay: 5ms;
-}
-
-.animate-heart-remove {
-    animation-name: heartRemoveAnimation;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    animation-duration: .6s;
-    animation-delay: 3ms;
-}
-
-.icon-heart:hover {
-    transform: scale(1.15);
-    color: rgba(255, 0, 0, 0.966) !important;
-}
-
 .comment-footer span {
     margin-right: 1.2rem;
 }
+.comment-card-footer {
+    text-align: left;
+}
+
+.comment-card-footer button {
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    margin-top: .4rem;
+    padding: .5rem 1rem .5rem 1rem;
+    transition: .4s;
+}
+
+.comment-card-footer i {
+    margin-right: .3rem;
+}
+
+
+.toggle-comments {
+    width: 97.5%;
+    padding: .6rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-left: .3rem;
+}
+
+.toggle-comments button {
+    margin-left: 1rem;
+    border: none;
+    border-radius: .6rem;
+    padding: .3rem .6rem;
+}
+
+.toggle-comments button i {
+    margin-right: .1rem;
+}
+
+.comments-open {
+    display: block ;
+}
+/* Comment end */
+
+
+/* Replies start */
 
 .replies {
     border-left: 1px solid var(--border_color);
@@ -246,29 +238,33 @@
     background-color: var(--golden) !important;
 }
 
-.comment-card-footer {
-    text-align: left;
-}
-
-.comment-card-footer button {
-    border: none;
-    outline: none;
-    border-radius: .5rem;
-    margin-top: .4rem;
-    padding: .5rem 1rem .5rem 1rem;
-    transition: .4s;
-}
-
-.comment-card-footer i {
-    margin-right: .3rem;
-}
-
-
 .trash-reply {
     display: inline;
     margin-left: 1rem;
     padding: .2rem;
     font-size: small;
+}
+/* Replies end */
+
+.animate-heart {
+    animation-name: heartAnimation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: .6s;
+    animation-delay: 5ms;
+}
+
+.animate-heart-remove {
+    animation-name: heartRemoveAnimation;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: .6s;
+    animation-delay: 3ms;
+}
+
+.icon-heart:hover {
+    transform: scale(1.15);
+    color: rgba(255, 0, 0, 0.966) !important;
 }
 
 .trash-div {
@@ -364,28 +360,38 @@
     display: none;
 }
 
-.toggle-comments {
-    width: 97.5%;
-    padding: .6rem;
-    background-color: white;
-    border-radius: 1rem;
-    margin-top: 1rem;
-    margin-left: .3rem;
-}
-
-.toggle-comments button {
+.icon-heart {
     margin-left: 1rem;
-    border: none;
-    border-radius: .6rem;
-    padding: .3rem .6rem;
+    margin-right: .4rem;
+    color: rgba(238, 10, 10, 0.5) !important;
+    transition: .4s;
+}
+@keyframes heartAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.45);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
 }
 
-.toggle-comments button i {
-    margin-right: .1rem;
-}
+@keyframes heartRemoveAnimation {
+    0% {
+        transform: scale(1.2);
+    }
 
-.comments-open {
-    display: block ;
+    75% {
+        transform: scale(0.85);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media screen and (min-width:1200px) {

@@ -17,6 +17,15 @@
 .form-control:focus{
     box-shadow: none;
 }
+.editorArea{
+  margin: 0;
+  padding: 1.6rem;
+  color: black;
+  border-radius: 1.4rem;
+  background-color: white;
+  transition: .2s;
+}
+
 /* FOR TAGS */
 .keyHandler {
   float: left;
@@ -85,14 +94,9 @@
   margin: auto;
   font-size: 1.5rem;
 }
-.editorArea{
-  margin: 0;
-  padding: 1.6rem;
-  color: black;
-  border-radius: 1.4rem;
-  background-color: white;
-  transition: .2s;
-}
+/* Tags end */
+
+/* Responsive */
 @media screen and (max-width: 380px) {
 
     .keyHandler>button {

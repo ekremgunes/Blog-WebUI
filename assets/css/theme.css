@@ -1,9 +1,5 @@
 :root {
-  --light_secondary: #ffb803;
-  --light_dark: #1e0521;
   --dark_primary: rgb(22, 22, 22);
-  --dark_secondary: rgba(129, 131, 132, 0.5);
-  --dark_light: #96a3da;
   --dark_theme: #1d2226;
 }
 
@@ -14,7 +10,6 @@
 }
 
 .dark {
-  /* background-color: rgba(0, 0, 0, 0.705);*/
   background-color: var(--dark_primary) !important;
   color: whitesmoke !important;
   transition: .3s;
@@ -65,7 +60,6 @@
   right: 0;
   bottom: 0;
   background-color: #edce36b7;
-  /* background-color: rgb(195, 195, 195); */
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -87,7 +81,6 @@
 }
 
 input:checked+.slider {
-  /* background-color: #edcf36; */
   background-color: var(--light_blue);
 }
 
