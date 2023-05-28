@@ -2,17 +2,6 @@ const ThemeSwitch = document.querySelector('#switch-input')
 const MobileSwitch = document.querySelector("#mobileDarkSwitch")
 const body = document.body
 
-const posts = document.querySelectorAll(".post")
-const footerDiv = document.querySelector("#footer")
-const socialLinks = document.querySelectorAll("#footer #footer-social-links ul li a")
-const footerLinks = document.querySelectorAll(".footer-links a")
-const leftSidebar = document.querySelector(".left-div")
-const leftSidebarLinks = document.querySelectorAll(".left-div ul li")
-const hamburgerDivSpans = document.querySelectorAll("#hamburgerDiv span")
-const editorArea = document.querySelector(".editorArea")
-const userInfo = document.querySelector(".user-info")
-const settingsArea = document.querySelector(".settings-area")
-const filterDiv = document.querySelector(".filters")
 
 //theme classes
 const dark = "item-dark";
@@ -51,7 +40,18 @@ MobileSwitch.addEventListener('click', () => {
 
 const changeTheme = (theme) => {
     const comments = document.querySelectorAll(".comment")
-
+    const posts = document.querySelectorAll(".post")
+    const footerDiv = document.querySelector("#footer")
+    const socialLinks = document.querySelectorAll("#footer #footer-social-links ul li a")
+    const footerLinks = document.querySelectorAll(".footer-links a")
+    const leftSidebar = document.querySelector(".left-div")
+    const leftSidebarLinks = document.querySelectorAll(".left-div ul li")
+    const hamburgerDivSpans = document.querySelectorAll("#hamburgerDiv span")
+    const editorArea = document.querySelector(".editorArea")
+    const userInfo = document.querySelector(".user-info")
+    const settingsArea = document.querySelector(".settings-area")
+    const filterDiv = document.querySelector(".filters")
+    
     if (theme == 'dark') {
         //swicht color of all area
 
@@ -193,8 +193,8 @@ const changeTheme = (theme) => {
                 e.classList.remove(dark)
                 e.querySelector(".post-info .post-date").classList.remove(darkText)
                 e.querySelector(".post-info .userName").classList.remove(darkText)
-                e.querySelector(".post-head").classList.remove(darkText)
-                e.querySelector(".post-inner").classList.remove(darkText)
+                e.querySelector(".post-head")?.classList.remove(darkText)
+                e.querySelector(".post-inner")?.classList.remove(darkText)
                 e.querySelectorAll(".tag")
                     .forEach(t => {
                         t.classList.remove(darkText)
