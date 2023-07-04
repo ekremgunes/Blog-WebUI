@@ -1,9 +1,9 @@
 <h3>Example views</h3>
 <hr>
 
-<img src="readmeFiles/Ekran görüntüsü 2023-04-03 101205.png"/>
-<hr>
 <img src="readmeFiles/Ekran görüntüsü 2023-04-03 101228.png"/>
+<hr>
+<img src="readmeFiles/Ekran görüntüsü 2023-04-03 101205.png"/>
 <hr>
 <img src="readmeFiles/Ekran görüntüsü 2023-04-03 101432.png"/>
 <div>
